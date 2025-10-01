@@ -9,12 +9,12 @@ import Image from 'next/image'
 interface Slide {
   id: string
   title: string
-  description: string
-  image: string
+  description?: string | null
+  desktopImage: string
   mobileImage: string
-  link: string
+  link?: string | null
   order: number
-  images?: string[]
+  thumbnails?: string[]
 }
 
 // Default slides data
@@ -23,31 +23,31 @@ const defaultSlides: Slide[] = [
     id: '1',
     title: "A.C Drive",
     description: "NovaGen Automation dealing in AC drives, soft starter & many more products of danfoss industries.",
-    image: "/images/hero/ac-drive-desktop.jpg",
+    desktopImage: "/images/hero/ac-drive-desktop.jpg",
     mobileImage: "/images/hero/ac-drive-mobile.jpg",
     link: "/products/danfoss",
     order: 1,
-    images: ["/images/products/ac-drive-1.jpg", "/images/products/ac-drive-2.jpg", "/images/products/ac-drive-3.jpg"]
+    thumbnails: ["/images/products/ac-drive-1.jpg", "/images/products/ac-drive-2.jpg", "/images/products/ac-drive-3.jpg"]
   },
   {
     id: '2',
     title: "Filter Drier & Pressure Transmitter",
     description: "NovaGen Automation dealing in Valve, Filter Drier, Pressure Transmitter, refrigeration compressor & many more products of Danfoss Industries.",
-    image: "/images/hero/filter-drier-desktop.jpg",
+    desktopImage: "/images/hero/filter-drier-desktop.jpg",
     mobileImage: "/images/hero/filter-drier-mobile.jpg",
     link: "/quote",
     order: 2,
-    images: ["/images/products/filter-drier-1.jpg", "/images/products/filter-drier-2.jpg"]
+    thumbnails: ["/images/products/filter-drier-1.jpg", "/images/products/filter-drier-2.jpg"]
   },
   {
     id: '3',
     title: "Servo Motors & Drives",
     description: "NovaGen Automation dealing in Servo Motor, Servo Drive, PLC, HMI, Cable, CPU & other accessories of Siemens make.",
-    image: "/images/hero/servo-desktop.jpg",
+    desktopImage: "/images/hero/servo-desktop.jpg",
     mobileImage: "/images/hero/servo-mobile.jpg",
     link: "/products/siemens",
     order: 3,
-    images: ["/images/products/servo-1.jpg", "/images/products/servo-2.jpg", "/images/products/servo-3.jpg"]
+    thumbnails: ["/images/products/servo-1.jpg", "/images/products/servo-2.jpg", "/images/products/servo-3.jpg"]
   }
 ];
 
@@ -56,39 +56,51 @@ export default function HeroCarousel() {
   const [slides, setSlides] = useState<Slide[]>(defaultSlides)
   const [isMounted, setIsMounted] = useState(false)
 
-  // Load slides from localStorage after component mounts
+  // Load slides from API after component mounts
   useEffect(() => {
-    setIsMounted(true)
-    
-    try {
-      const storedSlides = localStorage.getItem('homepage_slider')
-      if (storedSlides) {
-        const parsedSlides = JSON.parse(storedSlides)
-        // Add default images for product thumbnails if not present
-        const slidesWithImages = parsedSlides.map((slide: any, index: number) => ({
-          ...slide,
-          images: slide.images || getDefaultImages(index)
-        }))
-        setSlides(slidesWithImages)
-      } else {
-        // Save default slides to localStorage
-        localStorage.setItem('homepage_slider', JSON.stringify(defaultSlides))
+    let active = true
+
+    const fetchSlides = async () => {
+      setIsMounted(true)
+      try {
+        const response = await fetch('/api/slides', { cache: 'no-store' })
+        if (!response.ok) {
+          throw new Error('Failed to load slides')
+        }
+        const data = await response.json()
+        if (!active) return
+
+        const mapped: Slide[] = (data.slides ?? []).map((slide: any, index: number) => {
+          const thumbnails = (slide.thumbnails ?? []).map((thumb: any) => thumb.url)
+          const fallback = defaultSlides[index % defaultSlides.length]?.thumbnails ?? []
+
+          return {
+            id: slide.id,
+            title: slide.title,
+            description: slide.description ?? '',
+            desktopImage: slide.desktopImage ?? defaultSlides[index % defaultSlides.length].desktopImage,
+            mobileImage: slide.mobileImage ?? slide.desktopImage ?? defaultSlides[index % defaultSlides.length].mobileImage,
+            link: slide.link ?? '/products',
+            order: slide.order ?? 0,
+            thumbnails: thumbnails.length ? thumbnails : fallback,
+          }
+        })
+
+        setSlides(mapped.length ? mapped : defaultSlides)
+      } catch (error) {
+        console.error('Failed to load slides:', error)
+        if (active) {
+          setSlides(defaultSlides)
+        }
       }
-    } catch (error) {
-      console.error('Failed to load slides:', error)
-      // Fallback to default slides
-      setSlides(defaultSlides)
+    }
+
+    void fetchSlides()
+
+    return () => {
+      active = false
     }
   }, [])
-
-  const getDefaultImages = (index: number): string[] => {
-    const defaultImageSets = [
-      ["/images/products/ac-drive-1.jpg", "/images/products/ac-drive-2.jpg", "/images/products/ac-drive-3.jpg"],
-      ["/images/products/filter-drier-1.jpg", "/images/products/filter-drier-2.jpg"],
-      ["/images/products/servo-1.jpg", "/images/products/servo-2.jpg", "/images/products/servo-3.jpg"]
-    ]
-    return defaultImageSets[index] || []
-  }
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
@@ -122,12 +134,13 @@ export default function HeroCarousel() {
   }
 
   return (
-    <section className="relative h-[600px] lg:h-[700px] overflow-hidden">
+    <section data-testid="hero-carousel" className="relative h-[600px] lg:h-[700px] overflow-hidden">
       {/* Slides */}
       <div className="relative h-full">
         {slides.map((slide, index) => (
           <div
             key={slide.id}
+            data-testid="carousel-slide"
             className={`absolute inset-0 transition-opacity duration-500 ${
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
@@ -135,7 +148,7 @@ export default function HeroCarousel() {
             {/* Background Image */}
             <div className="absolute inset-0">
               <Image
-                src={slide.image}
+                src={slide.desktopImage}
                 alt={slide.title}
                 width={1920}
                 height={600}
@@ -155,9 +168,9 @@ export default function HeroCarousel() {
             <div className="relative h-full flex items-center justify-center">
               <div className="container mx-auto px-4 text-center text-white">
                 <div className="max-w-4xl mx-auto">
-                  {slide.images && (
+                  {slide.thumbnails && slide.thumbnails.length > 0 && (
                     <div className="flex justify-center space-x-4 mb-6 hidden lg:flex">
-                      {slide.images.map((img, imgIndex) => (
+                      {slide.thumbnails.map((img, imgIndex) => (
                         <Image
                           key={imgIndex}
                           src={img}
@@ -175,8 +188,8 @@ export default function HeroCarousel() {
                   <p className="text-lg lg:text-xl mb-8 max-w-2xl mx-auto animate-fade-in-up">
                     {slide.description}
                   </p>
-                  <Link href={slide.link}>
-                    <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg animate-fade-in-up">
+                  <Link href={slide.link ?? "/products"}>
+                    <Button className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 text-lg animate-fade-in-up shadow-lg">
                       Read More
                     </Button>
                   </Link>

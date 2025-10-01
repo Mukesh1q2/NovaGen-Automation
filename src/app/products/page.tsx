@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import { Settings, Zap, Cpu, Plug, Wrench, ArrowRight } from 'lucide-react'
+import { Settings, Zap, Cpu, Plug, Wrench, ArrowRight, Check, Bolt, Headphones, Package } from 'lucide-react'
 import { Metadata } from 'next'
-import { fetchCategories } from '@/lib/apiClient'
+import { getCategories as dbGetCategories } from '@/lib/dbService'
 
 export const metadata: Metadata = {
   title: 'Products | NovaGen Automation',
@@ -29,7 +29,7 @@ interface ProductCategory {
 }
 
 async function getCategories() {
-  const { categories } = await fetchCategories()
+  const categories = await dbGetCategories()
   return categories
 }
 
@@ -86,26 +86,26 @@ export default async function ProductsPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {productCategories.map((category) => (
-              <div key={category.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="p-8">
-                  <div className="flex justify-center mb-6">
-                    {category.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">
-                    {category.name}
-                  </h3>
-                  <p className="text-gray-600 mb-6 text-center leading-relaxed">
-                    {category.description}
-                  </p>
-                  
-                  <Link href={`/products/${category.slug}`}>
+              <Link key={category.id} href={`/products/${category.slug}`}>
+                <div data-testid="product-card" className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer h-full">
+                  <div className="p-8">
+                    <div className="flex justify-center mb-6">
+                      {category.icon}
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-800 mb-4 text-center">
+                      {category.name}
+                    </h3>
+                    <p className="text-gray-600 mb-6 text-center leading-relaxed">
+                      {category.description}
+                    </p>
+                    
                     <div className="flex items-center justify-center space-x-2 text-blue-600 hover:text-blue-700 font-medium transition-colors">
                       <span>View Details</span>
                       <ArrowRight className="h-4 w-4" />
                     </div>
-                  </Link>
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -139,7 +139,7 @@ export default async function ProductsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-blue-600">✓</span>
+                <Check className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Quality Assurance</h3>
               <p className="text-gray-600">All products are sourced from authorized manufacturers and undergo strict quality checks</p>
@@ -147,7 +147,7 @@ export default async function ProductsPage() {
             
             <div className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-blue-600">⚡</span>
+                <Bolt className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Energy Efficient</h3>
               <p className="text-gray-600">Our products are designed to optimize energy consumption and reduce operational costs</p>
@@ -155,7 +155,7 @@ export default async function ProductsPage() {
             
             <div className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-blue-600">🛠️</span>
+                <Headphones className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Technical Support</h3>
               <p className="text-gray-600">Expert technical support and maintenance services for all our products</p>
@@ -163,7 +163,7 @@ export default async function ProductsPage() {
             
             <div className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-blue-600">📦</span>
+                <Package className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Quick Delivery</h3>
               <p className="text-gray-600">Fast and reliable delivery to ensure minimal downtime for your operations</p>

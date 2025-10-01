@@ -1,12 +1,12 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { Search, X, FileText, Package, Wrench, Star } from 'lucide-react'
+import { X, Search, Package, FileText, Wrench, ArrowRight } from 'lucide-react'
 import { searchItems, groupSearchResults, SearchableItem } from '@/lib/searchUtils'
 
-export default function SearchPage() {
+function SearchPageContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const query = searchParams.get('q') || ''
@@ -14,23 +14,20 @@ export default function SearchPage() {
   const [results, setResults] = useState<SearchableItem[]>([])
   const [isLoading, setIsLoading] = useState(false)
 
-  // Perform search when query changes
   useEffect(() => {
     if (query) {
       setIsLoading(true)
-      // Simulate API delay
-      setTimeout(() => {
-        const searchResults = searchItems(query)
-        setResults(searchResults)
+      const timeout = setTimeout(() => {
+        setResults(searchItems(query))
         setIsLoading(false)
       }, 300)
-    } else {
-      setResults([])
+      return () => clearTimeout(timeout)
     }
+    setResults([])
   }, [query])
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
     if (searchQuery.trim()) {
       router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`)
     }
@@ -73,14 +70,13 @@ export default function SearchPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="container mx-auto px-4">
-        {/* Search Form */}
         <div className="max-w-2xl mx-auto mb-8">
           <form onSubmit={handleSearch} className="relative">
             <div className="flex">
               <input
                 type="text"
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(event) => setSearchQuery(event.target.value)}
                 placeholder="Search products, pages, and services..."
                 className="flex-1 px-4 py-3 border border-gray-300 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 autoFocus
@@ -89,7 +85,7 @@ export default function SearchPage() {
                 <button
                   type="button"
                   onClick={clearSearch}
-                  className="absolute right-24 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                  className="absolute right-24 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
                 >
                   <X className="h-5 w-5" />
                 </button>
@@ -105,18 +101,15 @@ export default function SearchPage() {
           </form>
         </div>
 
-        {/* Search Results */}
         {isLoading ? (
           <div className="text-center py-12">
-            <div className="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-600"></div>
+            <div className="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-600" />
             <p className="mt-4 text-gray-600">Searching...</p>
           </div>
         ) : query ? (
           <div>
             <div className="mb-6">
-              <h1 className="text-2xl font-bold text-gray-800">
-                Search Results for "{query}"
-              </h1>
+              <h1 className="text-2xl font-bold text-gray-800">Search Results for "{query}"</h1>
               <p className="text-gray-600 mt-1">
                 Found {results.length} result{results.length !== 1 ? 's' : ''}
               </p>
@@ -131,8 +124,8 @@ export default function SearchPage() {
                 <p className="text-gray-600 mb-4">
                   We couldn't find any matches for "{query}". Try different keywords or browse our products.
                 </p>
-                <Link href="/products" className="text-blue-600 hover:underline font-medium">
-                  Browse Products →
+                <Link href="/products" className="inline-flex items-center text-blue-600 hover:underline font-medium">
+                  Browse Products <ArrowRight className="ml-1 h-4 w-4" />
                 </Link>
               </div>
             ) : (
@@ -148,23 +141,15 @@ export default function SearchPage() {
                     </div>
                     <div className="divide-y">
                       {items.map((item) => (
-                        <Link
-                          key={item.id}
-                          href={item.url}
-                          className="block p-6 hover:bg-gray-50 transition-colors"
-                        >
-                          <h3 className="text-lg font-medium text-blue-600 hover:underline mb-1">
-                            {item.title}
-                          </h3>
+                        <Link key={item.id} href={item.url} className="block p-6 hover:bg-gray-50 transition-colors">
+                          <h3 className="text-lg font-medium text-blue-600 hover:underline mb-1">{item.title}</h3>
                           {item.category && (
                             <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded mb-2">
                               {item.category}
                             </span>
                           )}
                           <p className="text-gray-600 text-sm mb-2">{item.description}</p>
-                          <div className="flex items-center text-xs text-gray-500">
-                            <span>{item.url}</span>
-                          </div>
+                          <span className="text-xs text-gray-500">{item.url}</span>
                         </Link>
                       ))}
                     </div>
@@ -203,5 +188,22 @@ export default function SearchPage() {
         )}
       </div>
     </div>
+  )
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense
+      fallback={(
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+          <div className="text-center">
+            <div className="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-600" />
+            <p className="mt-4 text-gray-600">Loading search...</p>
+          </div>
+        </div>
+      )}
+    >
+      <SearchPageContent />
+    </Suspense>
   )
 }

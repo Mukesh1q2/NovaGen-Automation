@@ -7,7 +7,10 @@ A modern, feature-rich industrial automation website built with Next.js 15, Type
 ### 1. Enhanced Color Profile and Theme System
 - Added extended color palette with primary, secondary, success, warning, and info colors
 - Implemented light and dark theme support
-- Customized Tailwind CSS configuration for consistent styling
+- Added multiple custom themes (Ocean, Twilight, Slate, Blue, Purple)
+- Theme management through admin panel
+- Persistent theme settings stored in database
+- Global theme application with fallback/default theme
 
 ### 2. AI-Powered Chatbot
 - Intelligent chatbot with product knowledge base
@@ -22,6 +25,10 @@ A modern, feature-rich industrial automation website built with Next.js 15, Type
 - REST API for frontend-backend communication
 - Product management (create, read, update, delete)
 - Category management
+- Page management
+- Slider/image management
+- User management
+- Theme management
 
 ### 4. Additional Features
 - Improved SEO with comprehensive metadata
@@ -104,17 +111,36 @@ prisma/
 ### Admin Panel Access
 - URL: `/admin`
 - Login: Use password `admin123` for demo access
+- Only administrators can access the admin panel
 
 ### Product Management
 - Add new products with detailed specifications
 - Edit existing products
 - Manage product categories
 - Set pricing and inventory information
+- Upload and manage product images
 
 ### Content Management
 - Create and edit pages
 - Manage navigation menus
 - Update site settings
+
+### Theme Management
+- Select from multiple predefined themes (Light, Dark, Ocean, Twilight, Slate, Blue, Purple)
+- Customize theme colors through color pickers
+- Save custom themes to database
+- Apply themes globally across the site
+- Only administrators can modify theme settings
+
+### User Management
+- Create and manage user accounts
+- Assign roles (Administrator, Editor, Viewer)
+- Reset passwords
+
+### Slider Management
+- Add and edit homepage slider images
+- Set slide order and visibility
+- Upload desktop and mobile images
 
 ## Chatbot Capabilities
 
@@ -132,6 +158,8 @@ The Prisma schema includes:
 - Products with specifications
 - Pages
 - Users (for admin access)
+- Homepage slides
+- Theme settings
 
 ## Deployment
 
@@ -159,6 +187,24 @@ Update product information in:
 
 ### CMS Content
 Manage through the admin panel or directly in the database.
+
+## Testing
+
+### E2E Tests
+Run Playwright tests:
+```bash
+npm test
+```
+
+Run tests with UI:
+```bash
+npm run test:ui
+```
+
+View test reports:
+```bash
+npm run test:report
+```
 
 ## Contributing
 

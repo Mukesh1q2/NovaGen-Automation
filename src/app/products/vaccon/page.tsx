@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowLeft, Cpu, CheckCircle, Star } from 'lucide-react'
+import { ArrowLeft, Cpu, CheckCircle, Star, Wrench, BarChart, Settings, BookOpen } from 'lucide-react'
 
 export default function VacconPage() {
   const products = [
@@ -144,7 +144,7 @@ export default function VacconPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🔧</span>
+                <Wrench className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Regular Check-ups</h3>
               <p className="text-gray-600 text-sm">Scheduled maintenance to prevent unexpected failures</p>
@@ -152,7 +152,7 @@ export default function VacconPage() {
             
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">📊</span>
+                <BarChart className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Performance Analysis</h3>
               <p className="text-gray-600 text-sm">Detailed analysis of drive performance and efficiency</p>
@@ -160,7 +160,7 @@ export default function VacconPage() {
             
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🛠️</span>
+                <Settings className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Emergency Repairs</h3>
               <p className="text-gray-600 text-sm">24/7 emergency repair services for critical situations</p>
@@ -168,7 +168,7 @@ export default function VacconPage() {
             
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">📚</span>
+                <BookOpen className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Training</h3>
               <p className="text-gray-600 text-sm">Operator and maintenance training programs</p>

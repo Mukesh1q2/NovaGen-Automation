@@ -1,0 +1,312 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e7] [cursor=pointer]:
+    - img [ref=e8] [cursor=pointer]
+  - alert [ref=e13]
+  - link "Skip to main content" [ref=e14]:
+    - /url: "#main-content"
+  - generic [ref=e17]:
+    - generic [ref=e18]:
+      - link [ref=e19]:
+        - /url: https://www.facebook.com
+        - img [ref=e20]
+      - link [ref=e22]:
+        - /url: https://twitter.com
+        - img [ref=e23]
+      - link [ref=e25]:
+        - /url: https://linkedin.com
+        - img [ref=e26]
+      - link [ref=e30]:
+        - /url: https://instagram.com
+        - img [ref=e31]
+      - link [ref=e34]:
+        - /url: https://youtube.com
+        - img [ref=e35]
+      - button "Toggle theme" [ref=e38]:
+        - img
+        - generic [ref=e39]: Toggle theme
+    - generic [ref=e40]:
+      - button "Search" [ref=e41]:
+        - img [ref=e42]
+        - generic [ref=e45]: Search
+      - generic [ref=e46]:
+        - img [ref=e47]
+        - generic [ref=e50]: "Mon - Sat: 9.30 - 18.30"
+      - link "info@novagenautomation.com" [ref=e51]:
+        - /url: mailto:info@novagenautomation.com
+        - img [ref=e52]
+        - generic [ref=e55]: info@novagenautomation.com
+      - link "Login / SignUp" [ref=e56]:
+        - /url: /login
+        - img [ref=e57]
+        - generic [ref=e60]: Login / SignUp
+  - banner [ref=e61]:
+    - generic [ref=e63]:
+      - link "NovaGen Automation" [ref=e64]:
+        - /url: /
+        - generic [ref=e65]: NovaGen Automation
+      - navigation "Main navigation" [ref=e66]:
+        - link "Home main" [ref=e68]:
+          - /url: /
+          - text: Home
+        - link "About Us main" [ref=e70]:
+          - /url: /about
+          - text: About Us
+        - link "Products main" [ref=e72]:
+          - /url: /products
+          - text: Products
+        - link "Vision & Mission main" [ref=e74]:
+          - /url: /vision
+          - text: Vision & Mission
+        - link "Gallery main" [ref=e76]:
+          - /url: /gallery
+          - text: Gallery
+        - link "Blog main" [ref=e78]:
+          - /url: /blog
+          - text: Blog
+        - link "Contact Us main" [ref=e80]:
+          - /url: /contact
+          - text: Contact Us
+      - link "Get A Quote" [ref=e82]:
+        - /url: /quote
+        - button "Get A Quote" [ref=e83]
+  - main [ref=e84]:
+    - generic [ref=e85]:
+      - generic [ref=e88]:
+        - heading "Gallery" [level=1] [ref=e89]
+        - paragraph [ref=e90]: Explore our projects, products, team, and facilities through our comprehensive gallery
+      - generic [ref=e93]:
+        - generic [ref=e94]:
+          - img [ref=e95]
+          - generic [ref=e97]:
+            - button "All" [ref=e98]
+            - button "Delta" [ref=e99]
+            - button "Mitsubishi" [ref=e100]
+            - button "Siemens" [ref=e101]
+            - button "Yaskawa" [ref=e102]
+            - button "Projects" [ref=e103]
+            - button "Team" [ref=e104]
+            - button "Office" [ref=e105]
+            - button "Events" [ref=e106]
+        - generic [ref=e107]:
+          - generic [ref=e108]:
+            - img [ref=e109]
+            - textbox "Search gallery..." [ref=e112]
+          - generic [ref=e113]:
+            - button [ref=e114]:
+              - img [ref=e115]
+            - button [ref=e117]:
+              - img [ref=e118]
+      - generic [ref=e121]:
+        - generic [ref=e122]:
+          - generic [ref=e123]:
+            - img "Delta HMI" [ref=e124]
+            - img [ref=e126]
+            - generic [ref=e130]: Delta
+          - generic [ref=e131]:
+            - heading "Delta HMI" [level=3] [ref=e132]
+            - paragraph [ref=e133]: Delta HMI panel
+        - generic [ref=e134]:
+          - generic [ref=e135]:
+            - img "Delta PLC" [ref=e136]
+            - img [ref=e138]
+            - generic [ref=e142]: Delta
+          - generic [ref=e143]:
+            - heading "Delta PLC" [level=3] [ref=e144]
+            - paragraph [ref=e145]: Delta PLC controller
+        - generic [ref=e146]:
+          - generic [ref=e147]:
+            - img "Mitsubishi HMI" [ref=e148]
+            - img [ref=e150]
+            - generic [ref=e154]: Mitsubishi
+          - generic [ref=e155]:
+            - heading "Mitsubishi HMI" [level=3] [ref=e156]
+            - paragraph [ref=e157]: Mitsubishi HMI panel
+        - generic [ref=e158]:
+          - generic [ref=e159]:
+            - img "Mitsubishi PLC" [ref=e160]
+            - img [ref=e162]
+            - generic [ref=e166]: Mitsubishi
+          - generic [ref=e167]:
+            - heading "Mitsubishi PLC" [level=3] [ref=e168]
+            - paragraph [ref=e169]: Mitsubishi PLC controller
+        - generic [ref=e170]:
+          - generic [ref=e171]:
+            - img "Siemens HMI" [ref=e172]
+            - img [ref=e174]
+            - generic [ref=e178]: Siemens
+          - generic [ref=e179]:
+            - heading "Siemens HMI" [level=3] [ref=e180]
+            - paragraph [ref=e181]: Siemens HMI panel
+        - generic [ref=e182]:
+          - generic [ref=e183]:
+            - img "Siemens PLC" [ref=e184]
+            - img [ref=e186]
+            - generic [ref=e190]: Siemens
+          - generic [ref=e191]:
+            - heading "Siemens PLC" [level=3] [ref=e192]
+            - paragraph [ref=e193]: Siemens PLC controller
+        - generic [ref=e194]:
+          - generic [ref=e195]:
+            - img "Yaskawa Servo" [ref=e196]
+            - img [ref=e198]
+            - generic [ref=e202]: Yaskawa
+          - generic [ref=e203]:
+            - heading "Yaskawa Servo" [level=3] [ref=e204]
+            - paragraph [ref=e205]: Yaskawa servo motor
+        - generic [ref=e206]:
+          - generic [ref=e207]:
+            - img "Yaskawa VFD" [ref=e208]
+            - img [ref=e210]
+            - generic [ref=e214]: Yaskawa
+          - generic [ref=e215]:
+            - heading "Yaskawa VFD" [level=3] [ref=e216]
+            - paragraph [ref=e217]: Yaskawa VFD drive
+        - generic [ref=e218]:
+          - generic [ref=e219]:
+            - img "Danfoss AC Drive Installation" [ref=e220]
+            - img [ref=e222]
+            - generic [ref=e226]: projects
+          - generic [ref=e227]:
+            - heading "Danfoss AC Drive Installation" [level=3] [ref=e228]
+            - paragraph [ref=e229]: Successful installation of Danfoss VLT drives at manufacturing facility
+        - generic [ref=e230]:
+          - generic [ref=e231]:
+            - img "Technical Team" [ref=e232]
+            - img [ref=e234]
+            - generic [ref=e238]: team
+          - generic [ref=e239]:
+            - heading "Technical Team" [level=3] [ref=e240]
+            - paragraph [ref=e241]: Our expert technical team during training session
+        - generic [ref=e242]:
+          - generic [ref=e243]:
+            - img "Office Interior" [ref=e244]
+            - img [ref=e246]
+            - generic [ref=e250]: office
+          - generic [ref=e251]:
+            - heading "Office Interior" [level=3] [ref=e252]
+            - paragraph [ref=e253]: Modern office space at NovaGen Automation
+        - generic [ref=e254]:
+          - generic [ref=e255]:
+            - img "Product Training Event" [ref=e256]
+            - img [ref=e258]
+            - generic [ref=e262]: events
+          - generic [ref=e263]:
+            - heading "Product Training Event" [level=3] [ref=e264]
+            - paragraph [ref=e265]: Technical training session for clients
+      - generic [ref=e268]:
+        - generic [ref=e269]:
+          - generic [ref=e270]: 150+
+          - generic [ref=e271]: Projects Completed
+        - generic [ref=e272]:
+          - generic [ref=e273]: 50+
+          - generic [ref=e274]: Happy Clients
+        - generic [ref=e275]:
+          - generic [ref=e276]: 25+
+          - generic [ref=e277]: Team Members
+        - generic [ref=e278]:
+          - generic [ref=e279]: 10+
+          - generic [ref=e280]: Years Experience
+      - generic [ref=e283]:
+        - heading "Have a Project in Mind?" [level=2] [ref=e284]
+        - paragraph [ref=e285]: Let us help you bring your automation ideas to life with our expertise and experience
+        - generic [ref=e286]:
+          - link "Contact Us" [ref=e287]:
+            - /url: /contact
+          - link "Get Quote" [ref=e288]:
+            - /url: /quote
+  - contentinfo [ref=e289]:
+    - generic [ref=e291]:
+      - generic [ref=e292]:
+        - heading "NovaGen Automation" [level=3] [ref=e294]
+        - paragraph [ref=e295]: We at NovaGen Automation are continuously working to interface technology, systems & human resources to provide products & services that meets quality & performance of the customers.
+        - generic [ref=e296]:
+          - img [ref=e297]
+          - generic [ref=e300]: Pot No. 56, Akal sahay Nagar, Mundian Kalan, Chandigarh Road, Ludhiana- 141015
+      - generic [ref=e301]:
+        - heading "Quick Links" [level=4] [ref=e302]
+        - list [ref=e303]:
+          - listitem [ref=e304]:
+            - link "Home" [ref=e305]:
+              - /url: /
+              - img [ref=e306]
+              - generic [ref=e308]: Home
+          - listitem [ref=e309]:
+            - link "About Us" [ref=e310]:
+              - /url: /about
+              - img [ref=e311]
+              - generic [ref=e313]: About Us
+          - listitem [ref=e314]:
+            - link "Contact Us" [ref=e315]:
+              - /url: /contact
+              - img [ref=e316]
+              - generic [ref=e318]: Contact Us
+          - listitem [ref=e319]:
+            - link "Enquiry" [ref=e320]:
+              - /url: /contact
+              - img [ref=e321]
+              - generic [ref=e323]: Enquiry
+          - listitem [ref=e324]:
+            - link "Career" [ref=e325]:
+              - /url: /career
+              - img [ref=e326]
+              - generic [ref=e328]: Career
+          - listitem [ref=e329]:
+            - link "FAQ" [ref=e330]:
+              - /url: /faq
+              - img [ref=e331]
+              - generic [ref=e333]: FAQ
+      - generic [ref=e334]:
+        - heading "Contact Us" [level=4] [ref=e335]
+        - generic [ref=e336]:
+          - generic [ref=e337]:
+            - img [ref=e338]
+            - generic [ref=e340]:
+              - generic [ref=e341]: "Contact no:"
+              - link "+91 98786-28680" [ref=e342]:
+                - /url: tel:+919878628680
+          - generic [ref=e343]:
+            - img [ref=e344]
+            - generic [ref=e346]:
+              - generic [ref=e347]: "Contact no:"
+              - link "+91 70874-88699" [ref=e348]:
+                - /url: tel:+917087488699
+          - generic [ref=e349]:
+            - img [ref=e350]
+            - generic [ref=e353]:
+              - generic [ref=e354]: "Email:"
+              - link "office@novagenautomation.com" [ref=e355]:
+                - /url: mailto:office@novagenautomation.com
+          - generic [ref=e356]:
+            - img [ref=e357]
+            - generic [ref=e360]:
+              - generic [ref=e361]: "Email:"
+              - link "info@novagenautomation.com" [ref=e362]:
+                - /url: mailto:info@novagenautomation.com
+        - generic [ref=e363]:
+          - heading "Follow Us:" [level=5] [ref=e364]
+          - generic [ref=e365]:
+            - link [ref=e366]:
+              - /url: https://www.facebook.com
+              - img [ref=e367]
+            - link [ref=e369]:
+              - /url: https://twitter.com
+              - img [ref=e370]
+            - link [ref=e372]:
+              - /url: https://linkedin.com
+              - img [ref=e373]
+            - link [ref=e377]:
+              - /url: https://instagram.com
+              - img [ref=e378]
+            - link [ref=e381]:
+              - /url: https://youtube.com
+              - img [ref=e382]
+      - generic [ref=e385]:
+        - heading "Reach Us" [level=4] [ref=e386]
+        - iframe [ref=e388]
+    - generic [ref=e391]: © 2025 NovaGen Automation. Designed By Kalsi IT Solution.
+  - region "Notifications (F8)":
+    - list
+```

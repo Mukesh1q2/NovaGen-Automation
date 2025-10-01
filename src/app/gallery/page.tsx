@@ -18,7 +18,10 @@ export default function GalleryPage() {
 
   const categories = [
     'all',
-    'products',
+    'Delta',
+    'Mitsubishi',
+    'Siemens',
+    'Yaskawa',
     'projects',
     'team',
     'office',
@@ -28,86 +31,86 @@ export default function GalleryPage() {
   const galleryItems: GalleryItem[] = [
     {
       id: 1,
+      title: "Delta HMI",
+      category: "Delta",
+      description: "Delta HMI panel",
+      image: "/images/products/Delta/Delta - HMI.png"
+    },
+    {
+      id: 2,
+      title: "Delta PLC",
+      category: "Delta",
+      description: "Delta PLC controller",
+      image: "/images/products/Delta/Delta - PLC.jpg"
+    },
+    {
+      id: 3,
+      title: "Mitsubishi HMI",
+      category: "Mitsubishi",
+      description: "Mitsubishi HMI panel",
+      image: "/images/products/Mitsubishi/MIt - HMI.jpg"
+    },
+    {
+      id: 4,
+      title: "Mitsubishi PLC",
+      category: "Mitsubishi",
+      description: "Mitsubishi PLC controller",
+      image: "/images/products/Mitsubishi/Mit - PLC.jpg"
+    },
+    {
+      id: 5,
+      title: "Siemens HMI",
+      category: "Siemens",
+      description: "Siemens HMI panel",
+      image: "/images/products/Siemens/Siemens - HMI.jpg"
+    },
+    {
+      id: 6,
+      title: "Siemens PLC",
+      category: "Siemens",
+      description: "Siemens PLC controller",
+      image: "/images/products/Siemens/Siemens - PLC.jpg"
+    },
+    {
+      id: 7,
+      title: "Yaskawa Servo",
+      category: "Yaskawa",
+      description: "Yaskawa servo motor",
+      image: "/images/products/Yaskawa/servo.jpg"
+    },
+    {
+      id: 8,
+      title: "Yaskawa VFD",
+      category: "Yaskawa",
+      description: "Yaskawa VFD drive",
+      image: "/images/products/Yaskawa/Yaskawa-VFD-Drive.png"
+    },
+    {
+      id: 9,
       title: "Danfoss AC Drive Installation",
       category: "projects",
       description: "Successful installation of Danfoss VLT drives at manufacturing facility",
       image: "/api/placeholder/400/300"
     },
     {
-      id: 2,
-      title: "Siemens PLC System",
-      category: "products",
-      description: "Siemens S7-1200 PLC with HMI interface",
-      image: "/api/placeholder/400/300"
-    },
-    {
-      id: 3,
+      id: 10,
       title: "Technical Team",
       category: "team",
       description: "Our expert technical team during training session",
       image: "/api/placeholder/400/300"
     },
     {
-      id: 4,
+      id: 11,
       title: "Office Interior",
       category: "office",
       description: "Modern office space at NovaGen Automation",
       image: "/api/placeholder/400/300"
     },
     {
-      id: 5,
-      title: "Custom Control Panel",
-      category: "products",
-      description: "Custom-designed automation control panel",
-      image: "/api/placeholder/400/300"
-    },
-    {
-      id: 6,
-      title: "Industrial Automation Project",
-      category: "projects",
-      description: "Complete automation solution for textile industry",
-      image: "/api/placeholder/400/300"
-    },
-    {
-      id: 7,
-      title: "Sales Team",
-      category: "team",
-      description: "Our dedicated sales team with industry expertise",
-      image: "/api/placeholder/400/300"
-    },
-    {
-      id: 8,
-      title: "Conference Room",
-      category: "office",
-      description: "Well-equipped conference room for client meetings",
-      image: "/api/placeholder/400/300"
-    },
-    {
-      id: 9,
+      id: 12,
       title: "Product Training Event",
       category: "events",
       description: "Technical training session for clients",
-      image: "/api/placeholder/400/300"
-    },
-    {
-      id: 10,
-      title: "Vaccon Drive System",
-      category: "products",
-      description: "Vaccon AC drive system for industrial applications",
-      image: "/api/placeholder/400/300"
-    },
-    {
-      id: 11,
-      title: "DBR Installation",
-      category: "projects",
-      description: "Dynamic Braking Resistor installation at crane facility",
-      image: "/api/placeholder/400/300"
-    },
-    {
-      id: 12,
-      title: "Trade Show Participation",
-      category: "events",
-      description: "NovaGen Automation at industrial automation expo",
       image: "/api/placeholder/400/300"
     }
   ]
@@ -203,7 +206,7 @@ export default function GalleryPage() {
               <p className="text-gray-500 text-lg">No items found matching your criteria.</p>
             </div>
           ) : (
-            <div className={
+            <div data-testid="gallery-grid" className={
               viewMode === 'grid' 
                 ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
                 : "space-y-6 max-w-4xl mx-auto"
@@ -211,6 +214,7 @@ export default function GalleryPage() {
               {filteredItems.map((item) => (
                 <div
                   key={item.id}
+                  data-testid="gallery-item"
                   className={`bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 group ${
                     viewMode === 'list' ? 'flex flex-col md:flex-row' : ''
                   }`}

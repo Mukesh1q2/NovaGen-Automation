@@ -1,23 +1,15 @@
 // page.tsx - Dynamic product page
 
 import Link from 'next/link'
-import { ArrowLeft, Settings, CheckCircle, Star, Download, Package, Wrench } from 'lucide-react'
-import { fetchProductsByCategory, fetchCategories } from '@/lib/apiClient'
+import { ArrowLeft, Settings, CheckCircle, Star, Download, Package, Wrench, Check } from 'lucide-react'
+import { getProductBySlug } from '@/lib/dbService'
 
 async function getProduct(slug: string) {
-  // In a real implementation, you would fetch the specific product
-  // For now, we'll get all products and find the one we need
-  const { categories } = await fetchCategories()
-  
-  for (const category of categories) {
-    const { products } = await fetchProductsByCategory(category.slug)
-    const product = products.find((p: any) => p.slug === slug)
-    if (product) {
-      return { product, category }
-    }
+  const product = await getProductBySlug(slug)
+  if (!product) {
+    return null
   }
-  
-  return null
+  return { product, category: product.category }
 }
 
 export default async function ProductPage({ params }: { params: { id: string } }) {
@@ -119,9 +111,13 @@ export default async function ProductPage({ params }: { params: { id: string } }
             {/* Product Image */}
             <div className="lg:col-span-1">
               <div className="bg-gray-100 rounded-lg p-6 flex items-center justify-center h-full">
-                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-64 h-64 flex items-center justify-center text-gray-500">
-                  Product Image
-                </div>
+                {product.images && product.images.length > 0 ? (
+                  <img src={product.images[0].url} alt={product.name} className="max-h-full max-w-full" />
+                ) : (
+                  <div className="bg-gray-200 border-2 border-dashed rounded-xl w-64 h-64 flex items-center justify-center text-gray-500">
+                    Product Image
+                  </div>
+                )}
               </div>
               
               {/* Download Brochure */}
@@ -275,7 +271,7 @@ export default async function ProductPage({ params }: { params: { id: string } }
                   {applications.map((application, index) => (
                     <div key={index} className="flex items-start p-3 bg-gray-50 rounded-lg">
                       <div className="bg-blue-100 w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                        <span className="text-blue-600 text-sm">✓</span>
+                        <Check className="h-4 w-4 text-blue-600" />
                       </div>
                       <span className="text-gray-700">{application}</span>
                     </div>

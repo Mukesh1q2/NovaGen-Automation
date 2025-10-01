@@ -5,14 +5,27 @@ import { Server } from 'socket.io';
 import next from 'next';
 
 const dev = process.env.NODE_ENV !== 'production';
-const currentPort = 3000;
-const hostname = 'localhost';
+const currentPort = parseInt(process.env.PORT || '3000', 10);
+const hostname = process.env.HOST || 'localhost';
+
+// Determine CORS origin based on environment
+// Use CORS_ORIGIN from environment variable, fallback to default values
+const corsOrigin = process.env.CORS_ORIGIN || (dev 
+  ? "http://localhost:3000" 
+  : process.env.NEXT_PUBLIC_SITE_URL || "https://novagenautomation.com");
+
+console.log(`Starting server in ${dev ? 'development' : 'production'} mode`);
+console.log(`CORS origin set to: ${corsOrigin}`);
 
 // Custom server with Socket.IO integration
 async function createCustomServer() {
+  let nextApp;
+  let server;
+  
   try {
     // Create Next.js app
-    const nextApp = next({ 
+    console.log('Initializing Next.js application...');
+    nextApp = next({ 
       dev,
       dir: process.cwd(),
       // In production, use the current directory where .next is located
@@ -20,23 +33,35 @@ async function createCustomServer() {
     });
 
     await nextApp.prepare();
+    console.log('Next.js application prepared successfully');
+    
     const handle = nextApp.getRequestHandler();
 
     // Create HTTP server that will handle both Next.js and Socket.IO
-    const server = createServer((req, res) => {
-      // Skip socket.io requests from Next.js handler
-      if (req.url?.startsWith('/api/socketio')) {
-        return;
+    server = createServer((req, res) => {
+      try {
+        // Skip socket.io requests from Next.js handler
+        if (req.url?.startsWith('/api/socketio')) {
+          return;
+        }
+        handle(req, res);
+      } catch (err) {
+        console.error('Request handling error:', err);
+        if (!res.headersSent) {
+          res.statusCode = 500;
+          res.end('Internal Server Error');
+        }
       }
-      handle(req, res);
     });
 
     // Setup Socket.IO
+    console.log('Setting up Socket.IO server...');
     const io = new Server(server, {
       path: '/api/socketio',
       cors: {
-        origin: "*",
-        methods: ["GET", "POST"]
+        origin: corsOrigin,
+        methods: ["GET", "POST"],
+        credentials: true
       }
     });
 
@@ -48,11 +73,39 @@ async function createCustomServer() {
       console.log(`> Socket.IO server running at ws://${hostname}:${currentPort}/api/socketio`);
     });
 
+    // Graceful shutdown
+    process.on('SIGTERM', () => {
+      console.log('SIGTERM received, shutting down gracefully...');
+      server.close(() => {
+        console.log('Process terminated');
+        process.exit(0);
+      });
+    });
+
+    process.on('SIGINT', () => {
+      console.log('SIGINT received, shutting down gracefully...');
+      server.close(() => {
+        console.log('Process terminated');
+        process.exit(0);
+      });
+    });
+
   } catch (err) {
     console.error('Server startup error:', err);
+    
+    // Try to close server if it was created
+    if (server) {
+      server.close(() => {
+        console.log('Server closed due to error');
+      });
+    }
+    
     process.exit(1);
   }
 }
 
 // Start the server
-createCustomServer();
+createCustomServer().catch((err) => {
+  console.error('Unhandled error in server startup:', err);
+  process.exit(1);
+});

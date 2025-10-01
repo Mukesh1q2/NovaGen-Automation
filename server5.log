@@ -1,0 +1,521 @@
+[33m[nodemon] 3.1.10[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): server.ts src\**\*[39m
+[33m[nodemon] watching extensions: ts,tsx,js,jsx[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+> Ready on http://localhost:3000
+> Socket.IO server running at ws://localhost:3000/api/socketio
+ ○ Compiling /api/auth/login ...
+ ✓ Compiled / in 15s (1162 modules)
+Login attempt for email: admin@novagenautomation.com
+User found: {
+  id: 'cmfsa8s2h0000toq0lf005ozc',
+  email: 'admin@novagenautomation.com'
+}
+Password match: true
+ POST /api/auth/login 200 in 17301ms
+ GET / 200 in 13035ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1327ms (1131 modules)
+ GET /images/team/sales-team.jpg 404 in 2233ms
+ GET /images/hero/company-office.jpg 404 in 2483ms
+ ⨯ The requested resource isn't a valid image for /images/team/sales-team.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/hero/company-office.jpg received null
+ GET /api/placeholder/400/300 404 in 2506ms
+ GET /images/team/technical-team.jpg 404 in 376ms
+ GET /images/team/backend-team.jpg 404 in 391ms
+ ⨯ The requested resource isn't a valid image for /images/team/technical-team.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/team/backend-team.jpg received null
+ ✓ Compiled /favicon.ico in 278ms (768 modules)
+ GET /favicon.ico 200 in 368ms
+ ○ Compiling /api/slides ...
+ ✓ Compiled /api/slides in 1348ms (1143 modules)
+ GET /api/slides 200 in 2021ms
+ GET /api/pages 200 in 2530ms
+ GET /images/products/ac-drive-1.jpg 404 in 2279ms
+ GET /images/products/ac-drive-2.jpg 404 in 2300ms
+ GET /images/products/ac-drive-3.jpg 404 in 2252ms
+ ⨯ The requested resource isn't a valid image for /images/products/ac-drive-1.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/products/ac-drive-2.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/products/ac-drive-3.jpg received null
+ GET /images/products/filter-drier-1.jpg 404 in 511ms
+ GET /images/products/filter-drier-2.jpg 404 in 537ms
+ GET /images/products/servo-1.jpg 404 in 554ms
+ ⨯ The requested resource isn't a valid image for /images/products/filter-drier-1.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/products/filter-drier-2.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/products/servo-1.jpg received null
+ GET /images/products/servo-2.jpg 404 in 370ms
+ GET /images/products/servo-3.jpg 404 in 386ms
+ ⨯ The requested resource isn't a valid image for /images/products/servo-2.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/products/servo-3.jpg received null
+ GET /api/placeholder/400/300 404 in 175ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 1779ms (1176 modules)
+ GET /contact 200 in 3128ms
+ GET / 200 in 1336ms
+ GET /api/placeholder/400/300 404 in 385ms
+ GET /images/hero/company-office.jpg 404 in 413ms
+ GET /images/team/sales-team.jpg 404 in 428ms
+ ⨯ The requested resource isn't a valid image for /images/hero/company-office.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/team/sales-team.jpg received null
+ GET /images/team/technical-team.jpg 404 in 424ms
+ GET /images/team/backend-team.jpg 404 in 434ms
+ ⨯ The requested resource isn't a valid image for /images/team/technical-team.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/team/backend-team.jpg received null
+ GET / 200 in 1791ms
+ GET /favicon.ico 200 in 41ms
+ GET /api/pages 200 in 62ms
+ GET /api/slides 200 in 91ms
+ GET /images/products/ac-drive-1.jpg 404 in 257ms
+ ⨯ The requested resource isn't a valid image for /images/products/ac-drive-1.jpg received null
+ GET /images/products/ac-drive-2.jpg 404 in 599ms
+ GET /images/products/ac-drive-3.jpg 404 in 618ms
+ GET /images/products/filter-drier-1.jpg 404 in 627ms
+ ⨯ The requested resource isn't a valid image for /images/products/ac-drive-2.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/products/ac-drive-3.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/products/filter-drier-1.jpg received null
+ GET /images/products/filter-drier-2.jpg 404 in 669ms
+ GET /images/products/servo-1.jpg 404 in 692ms
+ GET /images/products/servo-2.jpg 404 in 718ms
+ ⨯ The requested resource isn't a valid image for /images/products/filter-drier-2.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/products/servo-1.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/products/servo-2.jpg received null
+ GET /images/products/servo-3.jpg 404 in 231ms
+ ⨯ The requested resource isn't a valid image for /images/products/servo-3.jpg received null
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 1216ms (195 modules)
+ ○ Compiling /admin ...
+ ✓ Compiled /admin in 1494ms (1198 modules)
+ GET /admin 200 in 2415ms
+ GET /favicon.ico 200 in 77ms
+ GET /api/pages 200 in 103ms
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+> Ready on http://localhost:3000
+> Socket.IO server running at ws://localhost:3000/api/socketio
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+> Ready on http://localhost:3000
+> Socket.IO server running at ws://localhost:3000/api/socketio
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+> Ready on http://localhost:3000
+> Socket.IO server running at ws://localhost:3000/api/socketio
+ ○ Compiling / ...
+ ✓ Compiled / in 8.7s (961 modules)
+ ○ Compiling /_not-found ...
+ GET / 200 in 13711ms
+ ⨯ ./src/app/api/themes/active/route.ts:2:1
+Module not found: Can't resolve '@/lib/db'
+  1 | import { NextResponse } from 'next/server'
+> 2 | import { prisma } from '@/lib/db'
+    | ^
+  3 |
+  4 | export async function GET() {
+  5 |   try {
+
+https://nextjs.org/docs/messages/module-not-found
+ ⨯ ./src/app/api/themes/active/route.ts:2:1
+Module not found: Can't resolve '@/lib/db'
+  1 | import { NextResponse } from 'next/server'
+> 2 | import { prisma } from '@/lib/db'
+    | ^
+  3 |
+  4 | export async function GET() {
+  5 |   try {
+
+https://nextjs.org/docs/messages/module-not-found
+ GET /images/hero/company-office.jpg 500 in 39531ms
+ GET /api/placeholder/400/300 500 in 42102ms
+ GET /api/pages 500 in 33863ms
+ GET /api/themes/active 500 in 38572ms
+ GET /api/slides 500 in 38573ms
+ GET /api/pages 500 in 38577ms
+ ⨯ The requested resource isn't a valid image for /images/hero/company-office.jpg received null
+ GET /images/products/servo-2.jpg 500 in 159ms
+ GET /images/products/ac-drive-1.jpg 500 in 157ms
+ GET /images/products/ac-drive-2.jpg 500 in 142ms
+ GET /images/products/servo-1.jpg 500 in 133ms
+ ⨯ The requested resource isn't a valid image for /images/products/servo-2.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/products/ac-drive-1.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/products/ac-drive-2.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/products/servo-1.jpg received null
+ GET /images/products/ac-drive-3.jpg 500 in 220ms
+ ⨯ The requested resource isn't a valid image for /images/products/ac-drive-3.jpg received null
+ GET /api/slides 500 in 367ms
+ GET /images/products/filter-drier-1.jpg 500 in 174ms
+ GET /images/products/filter-drier-2.jpg 500 in 232ms
+ GET /images/products/servo-3.jpg 500 in 230ms
+ ⨯ The requested resource isn't a valid image for /images/products/filter-drier-1.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/products/filter-drier-2.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/products/servo-3.jpg received null
+ GET /images/team/sales-team.jpg 500 in 195ms
+ ⨯ The requested resource isn't a valid image for /images/team/sales-team.jpg received null
+ GET /images/team/technical-team.jpg 500 in 136ms
+ GET /images/team/backend-team.jpg 500 in 125ms
+ GET / 500 in 307ms
+ ⨯ The requested resource isn't a valid image for /images/team/technical-team.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/team/backend-team.jpg received null
+ GET / 500 in 121ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ GET / 500 in 79ms
+ GET / 500 in 63ms
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\cache\webpack\client-development-fallback\0.pack.gz_' -> 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\cache\webpack\client-development-fallback\0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\cache\webpack\client-development-fallback\0.pack.gz_' -> 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\cache\webpack\client-development-fallback\0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\cache\webpack\client-development-fallback\0.pack.gz_' -> 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\cache\webpack\client-development-fallback\0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\cache\webpack\client-development-fallback\0.pack.gz_' -> 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\cache\webpack\client-development-fallback\0.pack.gz'
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\cache\webpack\client-development-fallback\0.pack.gz_' -> 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\cache\webpack\client-development-fallback\0.pack.gz'
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+> Ready on http://localhost:3000
+> Socket.IO server running at ws://localhost:3000/api/socketio
+ ○ Compiling / ...
+ ✓ Compiled / in 5.4s (961 modules)
+ GET / 200 in 8491ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 2.2s (951 modules)
+ GET /images/hero/company-office.jpg 404 in 3805ms
+ GET /images/team/sales-team.jpg 404 in 4146ms
+ ⨯ The requested resource isn't a valid image for /images/hero/company-office.jpg received null
+ GET /api/placeholder/400/300 404 in 4319ms
+ ⨯ The requested resource isn't a valid image for /images/team/sales-team.jpg received null
+ GET /images/team/technical-team.jpg 404 in 399ms
+ ⨯ The requested resource isn't a valid image for /images/team/technical-team.jpg received null
+ GET /images/team/backend-team.jpg 404 in 404ms
+ ⨯ The requested resource isn't a valid image for /images/team/backend-team.jpg received null
+ ✓ Compiled /favicon.ico in 432ms (602 modules)
+ GET /favicon.ico 200 in 963ms
+ ○ Compiling /api/themes/active ...
+ ⨯ ./src/app/api/themes/active/route.ts:2:1
+Module not found: Can't resolve '@/lib/db'
+  1 | import { NextResponse } from 'next/server'
+> 2 | import { prisma } from '@/lib/db'
+    | ^
+  3 |
+  4 | export async function GET() {
+  5 |   try {
+
+https://nextjs.org/docs/messages/module-not-found
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+^Cnpm error A complete log of this run can be found in: C:\Users\crypt\AppData\Local\npm-cache\_logs\2025-09-21T12_10_52_853Z-debug-0.log
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting child process[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+^CServer startup error: Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'
+    at async createCustomServer (server.ts:22:5) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json'
+}

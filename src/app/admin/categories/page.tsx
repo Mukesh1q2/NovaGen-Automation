@@ -1,18 +1,33 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { Plus, Edit, Trash2, Search } from 'lucide-react'
-import { getCategories, createCategory, updateCategory, deleteCategory, getCategoryById } from '@/lib/db'
 
 interface ProductCategory {
   id: string
   name: string
   slug: string
-  description: string
-  icon: string
+  description: string | null
+  icon: string | null
   order: number
   createdAt: string
   updatedAt: string
+}
+
+interface CategoryForm {
+  name: string
+  slug: string
+  description: string
+  icon: string
+  order: number
+}
+
+const emptyForm: CategoryForm = {
+  name: '',
+  slug: '',
+  description: '',
+  icon: '',
+  order: 0,
 }
 
 export default function CategoriesPage() {
@@ -21,38 +36,35 @@ export default function CategoriesPage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [showForm, setShowForm] = useState(false)
   const [editingCategory, setEditingCategory] = useState<ProductCategory | null>(null)
-  const [formData, setFormData] = useState({
-    name: '',
-    slug: '',
-    description: '',
-    icon: '',
-    order: 0
-  })
+  const [formData, setFormData] = useState<CategoryForm>(emptyForm)
+  const [error, setError] = useState<string | null>(null)
 
-  useEffect(() => {
-    loadCategories()
-  }, [])
-
-  const loadCategories = () => {
+  const loadCategories = useCallback(async () => {
+    setLoading(true)
+    setError(null)
     try {
-      const allCategories = getCategories()
-      setCategories(allCategories)
-    } catch (error) {
-      console.error('Failed to load categories:', error)
+      const response = await fetch('/api/categories', { cache: 'no-store' })
+      if (!response.ok) {
+        throw new Error('Failed to load categories')
+      }
+      const data = await response.json()
+      setCategories(data.categories ?? [])
+    } catch (err) {
+      console.error('loadCategories error', err)
+      setError(err instanceof Error ? err.message : 'Unable to load categories')
+      setCategories([])
     } finally {
       setLoading(false)
     }
-  }
+  }, [])
+
+  useEffect(() => {
+    void loadCategories()
+  }, [loadCategories])
 
   const handleCreate = () => {
     setEditingCategory(null)
-    setFormData({
-      name: '',
-      slug: '',
-      description: '',
-      icon: '',
-      order: 0
-    })
+    setFormData(emptyForm)
     setShowForm(true)
   }
 
@@ -61,45 +73,71 @@ export default function CategoriesPage() {
     setFormData({
       name: category.name,
       slug: category.slug,
-      description: category.description,
-      icon: category.icon,
-      order: category.order
+      description: category.description ?? '',
+      icon: category.icon ?? '',
+      order: category.order ?? 0,
     })
     setShowForm(true)
   }
 
-  const handleDelete = (id: string) => {
-    if (confirm('Are you sure you want to delete this category? This will also delete all products in this category.')) {
-      try {
-        deleteCategory(id)
-        loadCategories()
-      } catch (error) {
-        console.error('Failed to delete category:', error)
-        alert('Failed to delete category')
-      }
+  const handleDelete = async (id: string) => {
+    if (!confirm('Are you sure you want to delete this category?')) {
+      return
     }
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
     try {
-      if (editingCategory) {
-        updateCategory(editingCategory.id, formData)
-      } else {
-        createCategory(formData)
+      const response = await fetch(`/api/categories/${id}`, { method: 'DELETE' })
+      if (!response.ok) {
+        throw new Error('Failed to delete category')
       }
-      setShowForm(false)
-      loadCategories()
-    } catch (error) {
-      console.error('Failed to save category:', error)
-      alert('Failed to save category')
+      await loadCategories()
+    } catch (err) {
+      console.error('deleteCategory error', err)
+      alert('Failed to delete category. Please try again.')
     }
   }
 
-  const filteredCategories = categories.filter(category => 
-    category.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    category.description.toLowerCase().includes(searchTerm.toLowerCase())
-  )
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault()
+    try {
+      const payload = {
+        name: formData.name,
+        slug: formData.slug,
+        description: formData.description || null,
+        icon: formData.icon || null,
+        order: formData.order ?? 0,
+      }
+
+      const response = await fetch(editingCategory ? `/api/categories/${editingCategory.id}` : '/api/categories', {
+        method: editingCategory ? 'PUT' : 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      })
+
+      if (!response.ok) {
+        const message = await response.json().catch(() => ({ error: 'Failed to save category' }))
+        throw new Error(message.error ?? 'Failed to save category')
+      }
+
+      setShowForm(false)
+      await loadCategories()
+    } catch (err) {
+      console.error('saveCategory error', err)
+      alert(err instanceof Error ? err.message : 'Failed to save category')
+    }
+  }
+
+  const filteredCategories = useMemo(() => {
+    return categories.filter((category) => {
+      const needle = searchTerm.toLowerCase()
+      return (
+        category.name.toLowerCase().includes(needle) ||
+        category.slug.toLowerCase().includes(needle) ||
+        (category.description ?? '').toLowerCase().includes(needle)
+      )
+    })
+  }, [categories, searchTerm])
 
   if (loading) {
     return (
@@ -115,10 +153,14 @@ export default function CategoriesPage() {
     return (
       <div className="p-6">
         <div className="flex items-center justify-between mb-6">
-          <h1 className="text-2xl font-bold text-gray-900">
-            {editingCategory ? 'Edit Category' : 'Add Category'}
-          </h1>
-          <button 
+          <div>
+            <h1 className="text-2xl font-bold text-gray-900">
+              {editingCategory ? 'Edit Category' : 'Add Category'}
+            </h1>
+            <p className="text-gray-600">Manage your product taxonomy</p>
+            {error && <p className="text-sm text-red-600 mt-2">{error}</p>}
+          </div>
+          <button
             onClick={() => setShowForm(false)}
             className="text-gray-500 hover:text-gray-700"
           >
@@ -136,7 +178,7 @@ export default function CategoriesPage() {
                 type="text"
                 required
                 value={formData.name}
-                onChange={(e) => setFormData({...formData, name: e.target.value})}
+                onChange={(event) => setFormData({ ...formData, name: event.target.value })}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -149,8 +191,9 @@ export default function CategoriesPage() {
                 type="text"
                 required
                 value={formData.slug}
-                onChange={(e) => setFormData({...formData, slug: e.target.value})}
+                onChange={(event) => setFormData({ ...formData, slug: event.target.value })}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                placeholder="e.g. danfoss"
               />
             </div>
 
@@ -160,35 +203,37 @@ export default function CategoriesPage() {
               </label>
               <textarea
                 value={formData.description}
-                onChange={(e) => setFormData({...formData, description: e.target.value})}
+                onChange={(event) => setFormData({ ...formData, description: event.target.value })}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 rows={3}
               />
             </div>
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Icon
-              </label>
-              <input
-                type="text"
-                value={formData.icon}
-                onChange={(e) => setFormData({...formData, icon: e.target.value})}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="e.g., settings, zap, package"
-              />
-            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Icon
+                </label>
+                <input
+                  type="text"
+                  value={formData.icon}
+                  onChange={(event) => setFormData({ ...formData, icon: event.target.value })}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  placeholder="Optional icon name"
+                />
+              </div>
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Order
-              </label>
-              <input
-                type="number"
-                value={formData.order}
-                onChange={(e) => setFormData({...formData, order: parseInt(e.target.value) || 0})}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  Display Order
+                </label>
+                <input
+                  type="number"
+                  value={formData.order}
+                  onChange={(event) => setFormData({ ...formData, order: Number(event.target.value) || 0 })}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
             </div>
 
             <div className="flex justify-end space-x-3">
@@ -218,8 +263,9 @@ export default function CategoriesPage() {
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Categories</h1>
           <p className="text-gray-600">Manage your product categories</p>
+          {error && <p className="text-sm text-red-600 mt-2">{error}</p>}
         </div>
-        <button 
+        <button
           onClick={handleCreate}
           className="mt-4 md:mt-0 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center"
         >
@@ -228,7 +274,6 @@ export default function CategoriesPage() {
         </button>
       </div>
 
-      {/* Filters */}
       <div className="bg-white rounded-lg shadow p-4 mb-6">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
@@ -237,12 +282,11 @@ export default function CategoriesPage() {
             placeholder="Search categories..."
             className="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={(event) => setSearchTerm(event.target.value)}
           />
         </div>
       </div>
 
-      {/* Categories Table */}
       <div className="bg-white rounded-lg shadow overflow-hidden">
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
@@ -278,23 +322,23 @@ export default function CategoriesPage() {
                     <div className="text-sm text-gray-900">{category.slug}</div>
                   </td>
                   <td className="px-6 py-4">
-                    <div className="text-sm text-gray-900 max-w-xs truncate">{category.description}</div>
+                    <div className="text-sm text-gray-900 max-w-xs truncate">{category.description ?? '-'}</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="text-sm text-gray-900">{category.icon}</div>
+                    <div className="text-sm text-gray-900">{category.icon ?? '-'}</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="text-sm text-gray-900">{category.order}</div>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                     <div className="flex justify-end space-x-2">
-                      <button 
+                      <button
                         onClick={() => handleEdit(category)}
                         className="text-blue-600 hover:text-blue-900"
                       >
                         <Edit className="h-4 w-4" />
                       </button>
-                      <button 
+                      <button
                         onClick={() => handleDelete(category.id)}
                         className="text-red-600 hover:text-red-900"
                       >
@@ -307,7 +351,7 @@ export default function CategoriesPage() {
             </tbody>
           </table>
         </div>
-        
+
         {filteredCategories.length === 0 && (
           <div className="text-center py-12">
             <p className="text-gray-500">No categories found</p>

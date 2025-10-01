@@ -1,112 +1,178 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { Suspense, useEffect, useRef, useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { Upload, X } from 'lucide-react'
-import { getProductById, updateProduct } from '@/lib/db'
+import { Upload, X, Image as ImageIcon } from 'lucide-react'
 
-export default function EditProductPage() {
+interface CategoryOption {
+  id: string
+  name: string
+}
+
+interface ApiProductResponse {
+  product: any
+}
+
+interface ApiCategoryResponse {
+  categories: CategoryOption[]
+}
+
+const emptyForm = {
+  name: '',
+  slug: '',
+  description: '',
+  shortDescription: '',
+  categoryId: '',
+  price: '',
+  sku: '',
+  tags: '',
+  isActive: true,
+  order: 0,
+}
+
+function EditProductForm() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const productId = searchParams.get('id')
-  
+  const fileInputRef = useRef<HTMLInputElement>(null)
+
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
-  const [categories, setCategories] = useState<any[]>([])
+  const [error, setError] = useState<string | null>(null)
+  const [categories, setCategories] = useState<CategoryOption[]>([])
+  const [formData, setFormData] = useState(emptyForm)
   const [imageUrls, setImageUrls] = useState<string[]>([])
   const [newImageUrl, setNewImageUrl] = useState('')
-  const [formData, setFormData] = useState({
-    name: '',
-    slug: '',
-    description: '',
-    shortDescription: '',
-    categoryId: '',
-    price: '',
-    sku: '',
-    tags: '',
-    isActive: true,
-    order: 0
-  })
 
-  // Load categories and product data
   useEffect(() => {
     if (!productId) {
       router.push('/admin/products')
       return
     }
 
-    try {
-      // Load categories
-      const storedCategories = localStorage.getItem('cms_categories')
-      if (storedCategories) {
-        setCategories(JSON.parse(storedCategories))
-      }
+    const loadData = async () => {
+      setLoading(true)
+      setError(null)
+      try {
+        const [productRes, categoriesRes] = await Promise.all([
+          fetch(`/api/products/${productId}`, { cache: 'no-store' }),
+          fetch('/api/categories', { cache: 'no-store' }),
+        ])
 
-      // Load product data
-      const product = getProductById(productId)
-      if (product) {
+        if (!productRes.ok) {
+          if (productRes.status === 404) {
+            router.push('/admin/products')
+            return
+          }
+          throw new Error('Failed to load product')
+        }
+
+        if (!categoriesRes.ok) {
+          throw new Error('Failed to load categories')
+        }
+
+        const productData: ApiProductResponse = await productRes.json()
+        const categoriesData: ApiCategoryResponse = await categoriesRes.json()
+
+        const product = productData.product
+        setCategories(categoriesData.categories ?? [])
         setFormData({
-          name: product.name,
-          slug: product.slug,
-          description: product.description,
-          shortDescription: product.shortDescription,
-          categoryId: product.categoryId,
-          price: product.price ? product.price.toString() : '',
-          sku: product.sku,
-          tags: product.tags ? product.tags.join(', ') : '',
-          isActive: product.isActive,
-          order: product.order
+          name: product.name ?? '',
+          slug: product.slug ?? '',
+          description: product.description ?? '',
+          shortDescription: product.shortDescription ?? '',
+          categoryId: product.categoryId ?? '',
+          price: typeof product.price === 'number' ? String(product.price) : '',
+          sku: product.sku ?? '',
+          tags: (product.tags ?? []).map((tag: any) => tag.name).join(', '),
+          isActive: Boolean(product.isActive),
+          order: product.order ?? 0,
         })
-        setImageUrls(product.images || [])
-      } else {
-        router.push('/admin/products')
-        return
+        setImageUrls((product.images ?? []).map((image: any) => image.url))
+      } catch (err) {
+        console.error('load product error', err)
+        setError(err instanceof Error ? err.message : 'Failed to load product')
+      } finally {
+        setLoading(false)
       }
-    } catch (error) {
-      console.error('Failed to load data:', error)
-      router.push('/admin/products')
-    } finally {
-      setLoading(false)
     }
+
+    void loadData()
   }, [productId, router])
 
   const handleAddImageUrl = () => {
-    if (newImageUrl.trim() && !imageUrls.includes(newImageUrl.trim())) {
-      setImageUrls([...imageUrls, newImageUrl.trim()])
-      setNewImageUrl('')
+    if (!newImageUrl.trim()) return
+    const trimmed = newImageUrl.trim()
+    if (!imageUrls.includes(trimmed)) {
+      setImageUrls((prev) => [...prev, trimmed])
     }
+    setNewImageUrl('')
   }
 
   const handleRemoveImageUrl = (index: number) => {
-    setImageUrls(imageUrls.filter((_, i) => i !== index))
+    setImageUrls((prev) => prev.filter((_, i) => i !== index))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const files = event.target.files
+    if (!files) return
+
+    Array.from(files).forEach((file) => {
+      const previewUrl = URL.createObjectURL(file)
+      setImageUrls((prev) => [...prev, previewUrl])
+    })
+
+    if (fileInputRef.current) {
+      fileInputRef.current.value = ''
+    }
+  }
+
+  const triggerFileInput = () => {
+    fileInputRef.current?.click()
+  }
+
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault()
     if (!productId) return
-    
+
     setSaving(true)
-    
+    setError(null)
+
     try {
-      const productData = {
+      const payload = {
         name: formData.name,
         slug: formData.slug,
-        description: formData.description,
-        shortDescription: formData.shortDescription,
+        description: formData.description || null,
+        shortDescription: formData.shortDescription || null,
         categoryId: formData.categoryId,
-        price: formData.price ? parseFloat(formData.price) : null,
-        sku: formData.sku,
-        images: imageUrls,
-        tags: formData.tags ? formData.tags.split(',').map(tag => tag.trim()) : [],
+        price: formData.price ? Number(formData.price) : null,
+        sku: formData.sku || null,
+        images: imageUrls.map((url, index) => ({ url, order: index })),
+        tags: formData.tags
+          ? formData.tags.split(',').map((tag) => ({ name: tag.trim() })).filter((tag) => tag.name.length > 0)
+          : [],
         isActive: formData.isActive,
-        order: formData.order
+        order: formData.order ?? 0,
       }
-      
-      updateProduct(productId, productData)
+
+      const response = await fetch(`/api/products/${productId}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      })
+
+      if (!response.ok) {
+        const message = await response.json().catch(() => ({ error: 'Failed to update product' }))
+        throw new Error(message.error ?? 'Failed to update product')
+      }
+
       router.push('/admin/products')
-    } catch (error) {
-      console.error('Failed to update product:', error)
-      alert('Failed to update product')
+      router.refresh()
+    } catch (err) {
+      console.error('update product error', err)
+      setError(err instanceof Error ? err.message : 'Failed to update product. Please try again.')
     } finally {
       setSaving(false)
     }
@@ -122,13 +188,22 @@ export default function EditProductPage() {
     )
   }
 
+  if (!productId) {
+    return null
+  }
+
   return (
     <div className="p-6">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold text-gray-900">Edit Product</h1>
-        <button 
+        <div>
+          <h1 className="text-2xl font-bold text-gray-900">Edit Product</h1>
+          <p className="text-gray-600">Update product details</p>
+          {error && <p className="text-sm text-red-600 mt-2">{error}</p>}
+        </div>
+        <button
           onClick={() => router.push('/admin/products')}
           className="text-gray-500 hover:text-gray-700"
+          disabled={saving}
         >
           Cancel
         </button>
@@ -145,7 +220,7 @@ export default function EditProductPage() {
                 type="text"
                 required
                 value={formData.name}
-                onChange={(e) => setFormData({...formData, name: e.target.value})}
+                onChange={(event) => setFormData({ ...formData, name: event.target.value })}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -158,32 +233,7 @@ export default function EditProductPage() {
                 type="text"
                 required
                 value={formData.slug}
-                onChange={(e) => setFormData({...formData, slug: e.target.value})}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                SKU
-              </label>
-              <input
-                type="text"
-                value={formData.sku}
-                onChange={(e) => setFormData({...formData, sku: e.target.value})}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              />
-            </div>
-
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Price
-              </label>
-              <input
-                type="number"
-                step="0.01"
-                value={formData.price}
-                onChange={(e) => setFormData({...formData, price: e.target.value})}
+                onChange={(event) => setFormData({ ...formData, slug: event.target.value })}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -195,11 +245,11 @@ export default function EditProductPage() {
               <select
                 required
                 value={formData.categoryId}
-                onChange={(e) => setFormData({...formData, categoryId: e.target.value})}
+                onChange={(event) => setFormData({ ...formData, categoryId: event.target.value })}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <option value="">Select a category</option>
-                {categories.map(category => (
+                {categories.map((category) => (
                   <option key={category.id} value={category.id}>
                     {category.name}
                   </option>
@@ -209,12 +259,38 @@ export default function EditProductPage() {
 
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
-                Order
+                Price
+              </label>
+              <input
+                type="number"
+                min="0"
+                step="0.01"
+                value={formData.price}
+                onChange={(event) => setFormData({ ...formData, price: event.target.value })}
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                SKU
+              </label>
+              <input
+                type="text"
+                value={formData.sku}
+                onChange={(event) => setFormData({ ...formData, sku: event.target.value })}
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Display Order
               </label>
               <input
                 type="number"
                 value={formData.order}
-                onChange={(e) => setFormData({...formData, order: parseInt(e.target.value) || 0})}
+                onChange={(event) => setFormData({ ...formData, order: Number(event.target.value) || 0 })}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -226,7 +302,7 @@ export default function EditProductPage() {
             </label>
             <textarea
               value={formData.shortDescription}
-              onChange={(e) => setFormData({...formData, shortDescription: e.target.value})}
+              onChange={(event) => setFormData({ ...formData, shortDescription: event.target.value })}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               rows={2}
             />
@@ -238,7 +314,7 @@ export default function EditProductPage() {
             </label>
             <textarea
               value={formData.description}
-              onChange={(e) => setFormData({...formData, description: e.target.value})}
+              onChange={(event) => setFormData({ ...formData, description: event.target.value })}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               rows={4}
             />
@@ -249,14 +325,33 @@ export default function EditProductPage() {
               Product Images
             </label>
             <div className="space-y-3">
-              {/* Image URL input */}
+              <div className="flex items-center space-x-4">
+                <button
+                  type="button"
+                  onClick={triggerFileInput}
+                  className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                >
+                  <ImageIcon className="h-4 w-4 mr-2" />
+                  Upload Images
+                </button>
+                <span className="text-sm text-gray-500">Upload files or add direct URLs.</span>
+                <input
+                  type="file"
+                  ref={fileInputRef}
+                  onChange={handleFileUpload}
+                  multiple
+                  accept="image/*"
+                  className="hidden"
+                />
+              </div>
+
               <div className="flex">
                 <input
-                  type="text"
+                  type="url"
                   value={newImageUrl}
-                  onChange={(e) => setNewImageUrl(e.target.value)}
+                  onChange={(event) => setNewImageUrl(event.target.value)}
                   className="flex-1 px-3 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Enter image URL"
+                  placeholder="https://example.com/product.jpg"
                 />
                 <button
                   type="button"
@@ -267,13 +362,16 @@ export default function EditProductPage() {
                 </button>
               </div>
 
-              {/* Image previews */}
               {imageUrls.length > 0 && (
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
                   {imageUrls.map((url, index) => (
                     <div key={index} className="relative group">
-                      <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-24 flex items-center justify-center">
-                        <span className="text-xs text-gray-500 truncate px-1">{url.split('/').pop()}</span>
+                      <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-24 flex items-center justify-center overflow-hidden">
+                        <img
+                          src={url}
+                          alt={`Preview ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                       <button
                         type="button"
@@ -296,9 +394,8 @@ export default function EditProductPage() {
             <input
               type="text"
               value={formData.tags}
-              onChange={(e) => setFormData({...formData, tags: e.target.value})}
+              onChange={(event) => setFormData({ ...formData, tags: event.target.value })}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              placeholder="tag1, tag2, tag3"
             />
           </div>
 
@@ -307,7 +404,7 @@ export default function EditProductPage() {
               type="checkbox"
               id="isActive"
               checked={formData.isActive}
-              onChange={(e) => setFormData({...formData, isActive: e.target.checked})}
+              onChange={(event) => setFormData({ ...formData, isActive: event.target.checked })}
               className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
             />
             <label htmlFor="isActive" className="ml-2 block text-sm text-gray-900">
@@ -319,7 +416,8 @@ export default function EditProductPage() {
             <button
               type="button"
               onClick={() => router.push('/admin/products')}
-              className="px-4 py-2 text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200"
+              className="px-4 py-2 text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 disabled:opacity-50"
+              disabled={saving}
             >
               Cancel
             </button>
@@ -334,5 +432,21 @@ export default function EditProductPage() {
         </form>
       </div>
     </div>
+  )
+}
+
+export default function EditProductPage() {
+  return (
+    <Suspense
+      fallback={(
+        <div className="p-6">
+          <div className="flex items-center justify-center h-64">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600" />
+          </div>
+        </div>
+      )}
+    >
+      <EditProductForm />
+    </Suspense>
   )
 }

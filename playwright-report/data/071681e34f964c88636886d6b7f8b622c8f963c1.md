@@ -1,0 +1,219 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e7] [cursor=pointer]:
+    - img [ref=e8] [cursor=pointer]
+  - alert [ref=e12]
+  - link "Skip to main content" [ref=e13] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e16]:
+    - generic [ref=e17]:
+      - link [ref=e18] [cursor=pointer]:
+        - /url: https://www.facebook.com
+        - img [ref=e19] [cursor=pointer]
+      - link [ref=e21] [cursor=pointer]:
+        - /url: https://twitter.com
+        - img [ref=e22] [cursor=pointer]
+      - link [ref=e24] [cursor=pointer]:
+        - /url: https://linkedin.com
+        - img [ref=e25] [cursor=pointer]
+      - link [ref=e29] [cursor=pointer]:
+        - /url: https://instagram.com
+        - img [ref=e30] [cursor=pointer]
+      - link [ref=e34] [cursor=pointer]:
+        - /url: https://youtube.com
+        - img [ref=e35] [cursor=pointer]
+      - button "Toggle theme" [ref=e38]:
+        - img
+        - generic [ref=e39]: Toggle theme
+    - generic [ref=e40]:
+      - button "Search" [ref=e41]:
+        - img [ref=e42]
+        - generic [ref=e45]: Search
+      - generic [ref=e46]:
+        - img [ref=e47]
+        - generic [ref=e50]: "Mon - Sat: 9.30 - 18.30"
+      - link "info@novagenautomation.com" [ref=e51] [cursor=pointer]:
+        - /url: mailto:info@novagenautomation.com
+        - img [ref=e52] [cursor=pointer]
+        - generic [ref=e55] [cursor=pointer]: info@novagenautomation.com
+      - link "Login / SignUp" [ref=e56] [cursor=pointer]:
+        - /url: /login
+        - img [ref=e57] [cursor=pointer]
+        - generic [ref=e60] [cursor=pointer]: Login / SignUp
+  - banner [ref=e61]:
+    - generic [ref=e63]:
+      - link "NovaGen Automation" [ref=e64] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e65] [cursor=pointer]: NovaGen Automation
+      - navigation "Main navigation" [ref=e66]:
+        - link "Home main" [ref=e68] [cursor=pointer]:
+          - /url: /
+          - text: Home
+        - link "About Us main" [ref=e70] [cursor=pointer]:
+          - /url: /about
+          - text: About Us
+        - link "Products main" [ref=e72] [cursor=pointer]:
+          - /url: /products
+          - text: Products
+        - link "Vision & Mission main" [ref=e74] [cursor=pointer]:
+          - /url: /vision
+          - text: Vision & Mission
+        - link "Gallery main" [ref=e76] [cursor=pointer]:
+          - /url: /gallery
+          - text: Gallery
+        - link "Blog main" [ref=e78] [cursor=pointer]:
+          - /url: /blog
+          - text: Blog
+        - link "Contact Us main" [ref=e80] [cursor=pointer]:
+          - /url: /contact
+          - text: Contact Us
+      - link "Get A Quote" [ref=e82] [cursor=pointer]:
+        - /url: /quote
+        - button "Get A Quote" [ref=e83]
+  - main [ref=e84]:
+    - generic [ref=e85]:
+      - generic [ref=e88]:
+        - heading "Our Products" [level=1] [ref=e89]
+        - paragraph [ref=e90]: Explore our comprehensive range of industrial automation products from leading manufacturers
+      - generic [ref=e93]:
+        - link "Danfoss Danfoss industrial automation products View Details" [active] [ref=e94] [cursor=pointer]:
+          - /url: /products/danfoss
+          - generic [ref=e96] [cursor=pointer]:
+            - img [ref=e98] [cursor=pointer]
+            - heading "Danfoss" [level=3] [ref=e101] [cursor=pointer]
+            - paragraph [ref=e102] [cursor=pointer]: Danfoss industrial automation products
+            - generic [ref=e103] [cursor=pointer]:
+              - generic [ref=e104] [cursor=pointer]: View Details
+              - img [ref=e105] [cursor=pointer]
+        - link "Siemens Siemens automation and control systems View Details" [ref=e108] [cursor=pointer]:
+          - /url: /products/siemens
+          - generic [ref=e110] [cursor=pointer]:
+            - img [ref=e112] [cursor=pointer]
+            - heading "Siemens" [level=3] [ref=e114] [cursor=pointer]
+            - paragraph [ref=e115] [cursor=pointer]: Siemens automation and control systems
+            - generic [ref=e116] [cursor=pointer]:
+              - generic [ref=e117] [cursor=pointer]: View Details
+              - img [ref=e118] [cursor=pointer]
+      - generic [ref=e123]:
+        - heading "Need Custom Solutions?" [level=2] [ref=e124]
+        - paragraph [ref=e125]: Don't see what you're looking for? We provide custom automation solutions tailored to your specific requirements.
+        - link "Get A Quote" [ref=e126] [cursor=pointer]:
+          - /url: /quote
+          - generic [ref=e127] [cursor=pointer]:
+            - generic [ref=e128] [cursor=pointer]: Get A Quote
+            - img [ref=e129] [cursor=pointer]
+      - generic [ref=e133]:
+        - heading "Why Choose Our Products?" [level=2] [ref=e135]
+        - generic [ref=e136]:
+          - generic [ref=e137]:
+            - img [ref=e139]
+            - heading "Quality Assurance" [level=3] [ref=e141]
+            - paragraph [ref=e142]: All products are sourced from authorized manufacturers and undergo strict quality checks
+          - generic [ref=e143]:
+            - img [ref=e145]
+            - heading "Energy Efficient" [level=3] [ref=e148]
+            - paragraph [ref=e149]: Our products are designed to optimize energy consumption and reduce operational costs
+          - generic [ref=e150]:
+            - img [ref=e152]
+            - heading "Technical Support" [level=3] [ref=e154]
+            - paragraph [ref=e155]: Expert technical support and maintenance services for all our products
+          - generic [ref=e156]:
+            - img [ref=e158]
+            - heading "Quick Delivery" [level=3] [ref=e163]
+            - paragraph [ref=e164]: Fast and reliable delivery to ensure minimal downtime for your operations
+  - contentinfo [ref=e165]:
+    - generic [ref=e167]:
+      - generic [ref=e168]:
+        - heading "NovaGen Automation" [level=3] [ref=e170]
+        - paragraph [ref=e171]: We at NovaGen Automation are continuously working to interface technology, systems & human resources to provide products & services that meets quality & performance of the customers.
+        - generic [ref=e172]:
+          - img [ref=e173]
+          - generic [ref=e176]: Pot No. 56, Akal sahay Nagar, Mundian Kalan, Chandigarh Road, Ludhiana- 141015
+      - generic [ref=e177]:
+        - heading "Quick Links" [level=4] [ref=e178]
+        - list [ref=e179]:
+          - listitem [ref=e180]:
+            - link "Home" [ref=e181] [cursor=pointer]:
+              - /url: /
+              - img [ref=e182] [cursor=pointer]
+              - generic [ref=e185] [cursor=pointer]: Home
+          - listitem [ref=e186]:
+            - link "About Us" [ref=e187] [cursor=pointer]:
+              - /url: /about
+              - img [ref=e188] [cursor=pointer]
+              - generic [ref=e191] [cursor=pointer]: About Us
+          - listitem [ref=e192]:
+            - link "Contact Us" [ref=e193] [cursor=pointer]:
+              - /url: /contact
+              - img [ref=e194] [cursor=pointer]
+              - generic [ref=e197] [cursor=pointer]: Contact Us
+          - listitem [ref=e198]:
+            - link "Enquiry" [ref=e199] [cursor=pointer]:
+              - /url: /contact
+              - img [ref=e200] [cursor=pointer]
+              - generic [ref=e203] [cursor=pointer]: Enquiry
+          - listitem [ref=e204]:
+            - link "Career" [ref=e205] [cursor=pointer]:
+              - /url: /career
+              - img [ref=e206] [cursor=pointer]
+              - generic [ref=e209] [cursor=pointer]: Career
+          - listitem [ref=e210]:
+            - link "FAQ" [ref=e211] [cursor=pointer]:
+              - /url: /faq
+              - img [ref=e212] [cursor=pointer]
+              - generic [ref=e215] [cursor=pointer]: FAQ
+      - generic [ref=e216]:
+        - heading "Contact Us" [level=4] [ref=e217]
+        - generic [ref=e218]:
+          - generic [ref=e219]:
+            - img [ref=e220]
+            - generic [ref=e222]:
+              - generic [ref=e223]: "Contact no:"
+              - link "+91 98786-28680" [ref=e224] [cursor=pointer]:
+                - /url: tel:+919878628680
+          - generic [ref=e225]:
+            - img [ref=e226]
+            - generic [ref=e228]:
+              - generic [ref=e229]: "Contact no:"
+              - link "+91 70874-88699" [ref=e230] [cursor=pointer]:
+                - /url: tel:+917087488699
+          - generic [ref=e231]:
+            - img [ref=e232]
+            - generic [ref=e235]:
+              - generic [ref=e236]: "Email:"
+              - link "office@novagenautomation.com" [ref=e237] [cursor=pointer]:
+                - /url: mailto:office@novagenautomation.com
+          - generic [ref=e238]:
+            - img [ref=e239]
+            - generic [ref=e242]:
+              - generic [ref=e243]: "Email:"
+              - link "info@novagenautomation.com" [ref=e244] [cursor=pointer]:
+                - /url: mailto:info@novagenautomation.com
+        - generic [ref=e245]:
+          - heading "Follow Us:" [level=5] [ref=e246]
+          - generic [ref=e247]:
+            - link [ref=e248] [cursor=pointer]:
+              - /url: https://www.facebook.com
+              - img [ref=e249] [cursor=pointer]
+            - link [ref=e251] [cursor=pointer]:
+              - /url: https://twitter.com
+              - img [ref=e252] [cursor=pointer]
+            - link [ref=e254] [cursor=pointer]:
+              - /url: https://linkedin.com
+              - img [ref=e255] [cursor=pointer]
+            - link [ref=e259] [cursor=pointer]:
+              - /url: https://instagram.com
+              - img [ref=e260] [cursor=pointer]
+            - link [ref=e264] [cursor=pointer]:
+              - /url: https://youtube.com
+              - img [ref=e265] [cursor=pointer]
+      - generic [ref=e268]:
+        - heading "Reach Us" [level=4] [ref=e269]
+        - iframe [ref=e271]:
+          
+    - generic [ref=e274]: © 2025 NovaGen Automation. Designed By Kalsi IT Solution.
+  - region "Notifications (F8)":
+    - list
+```

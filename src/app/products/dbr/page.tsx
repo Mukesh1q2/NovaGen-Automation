@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowLeft, Wrench, CheckCircle, Star } from 'lucide-react'
+import { ArrowLeft, Wrench, CheckCircle, Star, Building2, MonitorUp, Settings, Factory } from 'lucide-react'
 
 export default function DBRPage() {
   const products = [
@@ -191,7 +191,7 @@ export default function DBRPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏗️</span>
+                <Building2 className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Cranes & Hoists</h3>
               <p className="text-gray-600 text-sm">Controlled braking for lifting equipment</p>
@@ -199,7 +199,7 @@ export default function DBRPage() {
             
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🚆</span>
+                <MonitorUp className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Elevators</h3>
               <p className="text-gray-600 text-sm">Smooth stopping for elevator systems</p>
@@ -207,7 +207,7 @@ export default function DBRPage() {
             
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">⚙️</span>
+                <Settings className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Machine Tools</h3>
               <p className="text-gray-600 text-sm">Precision braking for machinery</p>
@@ -215,7 +215,7 @@ export default function DBRPage() {
             
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏭</span>
+                <Factory className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Conveyors</h3>
               <p className="text-gray-600 text-sm">Controlled stopping of conveyor systems</p>

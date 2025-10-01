@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowLeft, Settings, CheckCircle, Star } from 'lucide-react'
+import { ArrowLeft, Settings, CheckCircle, Star, Factory, Snowflake, Droplets, Zap } from 'lucide-react'
 
 export default function DanfossPage() {
   const products = [
@@ -158,7 +158,7 @@ export default function DanfossPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🏭</span>
+                <Factory className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Manufacturing</h3>
               <p className="text-gray-600 text-sm">Precision control for production lines and machinery</p>
@@ -166,7 +166,7 @@ export default function DanfossPage() {
             
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">❄️</span>
+                <Snowflake className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2">HVAC</h3>
               <p className="text-gray-600 text-sm">Climate control systems for buildings and facilities</p>
@@ -174,7 +174,7 @@ export default function DanfossPage() {
             
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">💧</span>
+                <Droplets className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Water Management</h3>
               <p className="text-gray-600 text-sm">Pumps and treatment plants optimization</p>
@@ -182,7 +182,7 @@ export default function DanfossPage() {
             
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">⚡</span>
+                <Zap className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Power Generation</h3>
               <p className="text-gray-600 text-sm">Efficient control systems for power plants</p>

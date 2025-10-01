@@ -1,0 +1,222 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e7] [cursor=pointer]:
+    - img [ref=e8] [cursor=pointer]
+  - alert [ref=e11]
+  - link "Skip to main content" [ref=e12] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e15]:
+    - generic [ref=e16]:
+      - link [ref=e17] [cursor=pointer]:
+        - /url: https://www.facebook.com
+        - img [ref=e18] [cursor=pointer]
+      - link [ref=e20] [cursor=pointer]:
+        - /url: https://twitter.com
+        - img [ref=e21] [cursor=pointer]
+      - link [ref=e23] [cursor=pointer]:
+        - /url: https://linkedin.com
+        - img [ref=e24] [cursor=pointer]
+      - link [ref=e28] [cursor=pointer]:
+        - /url: https://instagram.com
+        - img [ref=e29] [cursor=pointer]
+      - link [ref=e32] [cursor=pointer]:
+        - /url: https://youtube.com
+        - img [ref=e33] [cursor=pointer]
+      - button "Toggle theme" [ref=e36]:
+        - img
+        - generic [ref=e37]: Toggle theme
+    - generic [ref=e38]:
+      - button "Search" [ref=e39]:
+        - img [ref=e40]
+        - generic [ref=e43]: Search
+      - generic [ref=e44]:
+        - img [ref=e45]
+        - generic [ref=e48]: "Mon - Sat: 9.30 - 18.30"
+      - link "info@novagenautomation.com" [ref=e49] [cursor=pointer]:
+        - /url: mailto:info@novagenautomation.com
+        - img [ref=e50] [cursor=pointer]
+        - generic [ref=e53] [cursor=pointer]: info@novagenautomation.com
+      - link "Login / SignUp" [ref=e54] [cursor=pointer]:
+        - /url: /login
+        - img [ref=e55] [cursor=pointer]
+        - generic [ref=e58] [cursor=pointer]: Login / SignUp
+  - banner [ref=e59]:
+    - generic [ref=e61]:
+      - link "NovaGen Automation" [ref=e62] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e63] [cursor=pointer]: NovaGen Automation
+      - navigation "Main navigation" [ref=e64]:
+        - link "Home main" [ref=e66] [cursor=pointer]:
+          - /url: /
+          - text: Home
+        - link "About Us main" [ref=e68] [cursor=pointer]:
+          - /url: /about
+          - text: About Us
+        - link "Products main" [ref=e70] [cursor=pointer]:
+          - /url: /products
+          - text: Products
+        - link "Vision & Mission main" [ref=e72] [cursor=pointer]:
+          - /url: /vision
+          - text: Vision & Mission
+        - link "Gallery main" [ref=e74] [cursor=pointer]:
+          - /url: /gallery
+          - text: Gallery
+        - link "Blog main" [ref=e76] [cursor=pointer]:
+          - /url: /blog
+          - text: Blog
+        - link "Contact Us main" [ref=e78] [cursor=pointer]:
+          - /url: /contact
+          - text: Contact Us
+      - link "Get A Quote" [ref=e80] [cursor=pointer]:
+        - /url: /quote
+        - button "Get A Quote" [ref=e81]
+  - main [ref=e82]:
+    - generic [ref=e83]:
+      - navigation [ref=e85]:
+        - generic [ref=e86]:
+          - link "Dashboard" [ref=e87] [cursor=pointer]:
+            - /url: /admin
+            - img [ref=e88] [cursor=pointer]
+            - text: Dashboard
+          - link "Products" [active] [ref=e90] [cursor=pointer]:
+            - /url: /admin/products
+            - img [ref=e91] [cursor=pointer]
+            - text: Products
+          - link "Categories" [ref=e95] [cursor=pointer]:
+            - /url: /admin/categories
+            - img [ref=e96] [cursor=pointer]
+            - text: Categories
+          - link "Pages" [ref=e98] [cursor=pointer]:
+            - /url: /admin/pages
+            - img [ref=e99] [cursor=pointer]
+            - text: Pages
+          - link "Users" [ref=e102] [cursor=pointer]:
+            - /url: /admin/users
+            - img [ref=e103] [cursor=pointer]
+            - text: Users
+          - link "Slider" [ref=e106] [cursor=pointer]:
+            - /url: /admin/slider
+            - img [ref=e107] [cursor=pointer]
+            - text: Slider
+          - link "Themes" [ref=e111] [cursor=pointer]:
+            - /url: /admin/themes
+            - img [ref=e112] [cursor=pointer]
+            - text: Themes
+        - generic [ref=e118]:
+          - button "Logout" [ref=e119]:
+            - img [ref=e120]
+            - text: Logout
+          - button "Toggle theme" [ref=e124]:
+            - img
+            - generic [ref=e125]: Toggle theme
+      - generic [ref=e129]:
+        - generic [ref=e130]:
+          - img [ref=e132]
+          - heading "Admin Login" [level=2] [ref=e135]
+          - paragraph [ref=e136]: Sign in to manage the NovaGen Automation website
+        - generic [ref=e137]:
+          - generic [ref=e138]:
+            - generic [ref=e139]:
+              - generic [ref=e140]: Email
+              - textbox "Email" [ref=e142]: admin@novagenautomation.com
+            - generic [ref=e143]:
+              - generic [ref=e144]: Password
+              - textbox "Password" [ref=e146]: Admin@123
+          - button "Signing in" [disabled] [ref=e147]
+          - paragraph [ref=e148]: Contact the site administrator if you need access.
+  - contentinfo [ref=e149]:
+    - generic [ref=e151]:
+      - generic [ref=e152]:
+        - heading "NovaGen Automation" [level=3] [ref=e154]
+        - paragraph [ref=e155]: We at NovaGen Automation are continuously working to interface technology, systems & human resources to provide products & services that meets quality & performance of the customers.
+        - generic [ref=e156]:
+          - img [ref=e157]
+          - generic [ref=e160]: Pot No. 56, Akal sahay Nagar, Mundian Kalan, Chandigarh Road, Ludhiana- 141015
+      - generic [ref=e161]:
+        - heading "Quick Links" [level=4] [ref=e162]
+        - list [ref=e163]:
+          - listitem [ref=e164]:
+            - link "Home" [ref=e165] [cursor=pointer]:
+              - /url: /
+              - img [ref=e166] [cursor=pointer]
+              - generic [ref=e168] [cursor=pointer]: Home
+          - listitem [ref=e169]:
+            - link "About Us" [ref=e170] [cursor=pointer]:
+              - /url: /about
+              - img [ref=e171] [cursor=pointer]
+              - generic [ref=e173] [cursor=pointer]: About Us
+          - listitem [ref=e174]:
+            - link "Contact Us" [ref=e175] [cursor=pointer]:
+              - /url: /contact
+              - img [ref=e176] [cursor=pointer]
+              - generic [ref=e178] [cursor=pointer]: Contact Us
+          - listitem [ref=e179]:
+            - link "Enquiry" [ref=e180] [cursor=pointer]:
+              - /url: /contact
+              - img [ref=e181] [cursor=pointer]
+              - generic [ref=e183] [cursor=pointer]: Enquiry
+          - listitem [ref=e184]:
+            - link "Career" [ref=e185] [cursor=pointer]:
+              - /url: /career
+              - img [ref=e186] [cursor=pointer]
+              - generic [ref=e188] [cursor=pointer]: Career
+          - listitem [ref=e189]:
+            - link "FAQ" [ref=e190] [cursor=pointer]:
+              - /url: /faq
+              - img [ref=e191] [cursor=pointer]
+              - generic [ref=e193] [cursor=pointer]: FAQ
+      - generic [ref=e194]:
+        - heading "Contact Us" [level=4] [ref=e195]
+        - generic [ref=e196]:
+          - generic [ref=e197]:
+            - img [ref=e198]
+            - generic [ref=e200]:
+              - generic [ref=e201]: "Contact no:"
+              - link "+91 98786-28680" [ref=e202] [cursor=pointer]:
+                - /url: tel:+919878628680
+          - generic [ref=e203]:
+            - img [ref=e204]
+            - generic [ref=e206]:
+              - generic [ref=e207]: "Contact no:"
+              - link "+91 70874-88699" [ref=e208] [cursor=pointer]:
+                - /url: tel:+917087488699
+          - generic [ref=e209]:
+            - img [ref=e210]
+            - generic [ref=e213]:
+              - generic [ref=e214]: "Email:"
+              - link "office@novagenautomation.com" [ref=e215] [cursor=pointer]:
+                - /url: mailto:office@novagenautomation.com
+          - generic [ref=e216]:
+            - img [ref=e217]
+            - generic [ref=e220]:
+              - generic [ref=e221]: "Email:"
+              - link "info@novagenautomation.com" [ref=e222] [cursor=pointer]:
+                - /url: mailto:info@novagenautomation.com
+        - generic [ref=e223]:
+          - heading "Follow Us:" [level=5] [ref=e224]
+          - generic [ref=e225]:
+            - link [ref=e226] [cursor=pointer]:
+              - /url: https://www.facebook.com
+              - img [ref=e227] [cursor=pointer]
+            - link [ref=e229] [cursor=pointer]:
+              - /url: https://twitter.com
+              - img [ref=e230] [cursor=pointer]
+            - link [ref=e232] [cursor=pointer]:
+              - /url: https://linkedin.com
+              - img [ref=e233] [cursor=pointer]
+            - link [ref=e237] [cursor=pointer]:
+              - /url: https://instagram.com
+              - img [ref=e238] [cursor=pointer]
+            - link [ref=e241] [cursor=pointer]:
+              - /url: https://youtube.com
+              - img [ref=e242] [cursor=pointer]
+      - generic [ref=e245]:
+        - heading "Reach Us" [level=4] [ref=e246]
+        - iframe [ref=e248]:
+          
+    - generic [ref=e251]: © 2025 NovaGen Automation. Designed By Kalsi IT Solution.
+  - region "Notifications (F8)":
+    - list
+```

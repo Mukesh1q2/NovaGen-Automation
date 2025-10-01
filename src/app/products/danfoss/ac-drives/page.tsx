@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowLeft, Settings, CheckCircle, Star, Download, Package, Wrench } from 'lucide-react'
+import { ArrowLeft, Settings, CheckCircle, Star, Download, Package, Wrench, Check } from 'lucide-react'
 
 export default function AcDrivesDetailPage() {
   const productSpecs = {
@@ -250,7 +250,7 @@ export default function AcDrivesDetailPage() {
                   {applications.map((application, index) => (
                     <div key={index} className="flex items-start p-3 bg-gray-50 rounded-lg">
                       <div className="bg-blue-100 w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                        <span className="text-blue-600 text-sm">✓</span>
+                        <Check className="h-4 w-4 text-blue-600" />
                       </div>
                       <span className="text-gray-700">{application}</span>
                     </div>

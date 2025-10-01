@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { FileText, Calculator, CheckCircle, Send } from 'lucide-react'
+import { FileText, Calculator, CheckCircle, Send, Check } from 'lucide-react'
 import { validateQuoteForm, ValidationError } from '@/lib/formValidation'
 
 export default function QuotePage() {
@@ -430,7 +430,7 @@ export default function QuotePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-blue-600">✓</span>
+                  <Check className="h-8 w-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Expert Consultation</h3>
                 <p className="text-gray-600">Get expert advice from our experienced engineers to find the perfect solution for your needs.</p>
@@ -438,7 +438,7 @@ export default function QuotePage() {
               
               <div className="text-center">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-blue-600">✓</span>
+                  <Check className="h-8 w-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Competitive Pricing</h3>
                 <p className="text-gray-600">We offer competitive pricing without compromising on quality or service.</p>
@@ -446,7 +446,7 @@ export default function QuotePage() {
               
               <div className="text-center">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-blue-600">✓</span>
+                  <Check className="h-8 w-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Quick Response</h3>
                 <p className="text-gray-600">Get your quote within 24-48 hours with detailed specifications and pricing.</p>

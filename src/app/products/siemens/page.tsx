@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowLeft, Zap, CheckCircle, Star } from 'lucide-react'
+import { ArrowLeft, Zap, CheckCircle, Star, Car, Pill, Pizza, Package } from 'lucide-react'
 
 export default function SiemensPage() {
   const products = [
@@ -151,7 +151,7 @@ export default function SiemensPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🚗</span>
+                <Car className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Automotive</h3>
               <p className="text-gray-600 text-sm">Precision manufacturing and assembly lines</p>
@@ -159,7 +159,7 @@ export default function SiemensPage() {
             
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">💊</span>
+                <Pill className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Pharmaceuticals</h3>
               <p className="text-gray-600 text-sm">Compliant automation for drug manufacturing</p>
@@ -167,7 +167,7 @@ export default function SiemensPage() {
             
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🍕</span>
+                <Pizza className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Food Processing</h3>
               <p className="text-gray-600 text-sm">Hygienic automation solutions</p>
@@ -175,7 +175,7 @@ export default function SiemensPage() {
             
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">📦</span>
+                <Package className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Packaging</h3>
               <p className="text-gray-600 text-sm">High-speed packaging machinery control</p>

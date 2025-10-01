@@ -1,0 +1,408 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e7] [cursor=pointer]:
+    - img [ref=e8] [cursor=pointer]
+  - alert [ref=e11]
+  - link "Skip to main content" [ref=e12] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e15]:
+    - generic [ref=e16]:
+      - link [ref=e17] [cursor=pointer]:
+        - /url: https://www.facebook.com
+        - img [ref=e18] [cursor=pointer]
+      - link [ref=e20] [cursor=pointer]:
+        - /url: https://twitter.com
+        - img [ref=e21] [cursor=pointer]
+      - link [ref=e23] [cursor=pointer]:
+        - /url: https://linkedin.com
+        - img [ref=e24] [cursor=pointer]
+      - link [ref=e28] [cursor=pointer]:
+        - /url: https://instagram.com
+        - img [ref=e29] [cursor=pointer]
+      - link [ref=e32] [cursor=pointer]:
+        - /url: https://youtube.com
+        - img [ref=e33] [cursor=pointer]
+      - button "Toggle theme" [ref=e36]:
+        - img
+        - generic [ref=e37]: Toggle theme
+    - generic [ref=e38]:
+      - button "Search" [ref=e39]:
+        - img [ref=e40]
+        - generic [ref=e43]: Search
+      - generic [ref=e44]:
+        - img [ref=e45]
+        - generic [ref=e48]: "Mon - Sat: 9.30 - 18.30"
+      - link "info@novagenautomation.com" [ref=e49] [cursor=pointer]:
+        - /url: mailto:info@novagenautomation.com
+        - img [ref=e50] [cursor=pointer]
+        - generic [ref=e53] [cursor=pointer]: info@novagenautomation.com
+      - link "Login / SignUp" [ref=e54] [cursor=pointer]:
+        - /url: /login
+        - img [ref=e55] [cursor=pointer]
+        - generic [ref=e58] [cursor=pointer]: Login / SignUp
+  - banner [ref=e59]:
+    - generic [ref=e61]:
+      - link "NovaGen Automation" [ref=e62] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e63] [cursor=pointer]: NovaGen Automation
+      - navigation "Main navigation" [ref=e64]:
+        - link "Home main" [ref=e66] [cursor=pointer]:
+          - /url: /
+          - text: Home
+        - link "About Us main" [ref=e68] [cursor=pointer]:
+          - /url: /about
+          - text: About Us
+        - generic [ref=e69]:
+          - link "Products main" [active] [ref=e70] [cursor=pointer]:
+            - /url: /products
+            - text: Products
+          - menu "Products submenu" [ref=e71]:
+            - menuitem "Danfoss (AC Drives) from dropdown" [ref=e72] [cursor=pointer]: Danfoss (AC Drives)
+            - menuitem "Siemens from dropdown" [ref=e73] [cursor=pointer]: Siemens
+            - menuitem "Vaccon from dropdown" [ref=e74] [cursor=pointer]: Vaccon
+            - menuitem "Panel from dropdown" [ref=e75] [cursor=pointer]: Panel
+            - menuitem "DBR from dropdown" [ref=e76] [cursor=pointer]: DBR
+            - menuitem "Any Other Enquiry from dropdown" [ref=e77] [cursor=pointer]: Any Other Enquiry
+        - link "Vision & Mission main" [ref=e79] [cursor=pointer]:
+          - /url: /vision
+          - text: Vision & Mission
+        - link "Gallery main" [ref=e81] [cursor=pointer]:
+          - /url: /gallery
+          - text: Gallery
+        - link "Blog main" [ref=e83] [cursor=pointer]:
+          - /url: /blog
+          - text: Blog
+        - link "Contact Us main" [ref=e85] [cursor=pointer]:
+          - /url: /contact
+          - text: Contact Us
+      - link "Get A Quote" [ref=e87] [cursor=pointer]:
+        - /url: /quote
+        - button "Get A Quote" [ref=e88]
+  - main [ref=e89]:
+    - generic [ref=e90]:
+      - generic [ref=e93]: Authorised channel partner of M/s Danfoss Industries & M/s Siemens ltd.
+      - generic [ref=e94]:
+        - generic [ref=e95]:
+          - generic [ref=e96]:
+            - img "A.C Drive" [ref=e98]
+            - generic [ref=e102]:
+              - generic [ref=e103]:
+                - img "Product 1" [ref=e104]
+                - img "Product 2" [ref=e105]
+                - img "Product 3" [ref=e106]
+              - heading "A.C Drive" [level=2] [ref=e107]
+              - paragraph [ref=e108]: NovaGen Automation dealing in AC drives, soft starter & many more products of danfoss industries.
+              - link "Read More" [ref=e109] [cursor=pointer]:
+                - /url: /products/danfoss
+                - button "Read More" [ref=e110]
+          - generic [ref=e111]:
+            - img "Filter Drier & Pressure Transmitter" [ref=e113]
+            - generic [ref=e117]:
+              - generic [ref=e118]:
+                - img "Product 1" [ref=e119]
+                - img "Product 2" [ref=e120]
+              - heading "Filter Drier & Pressure Transmitter" [level=2] [ref=e121]
+              - paragraph [ref=e122]: NovaGen Automation dealing in Valve, Filter Drier, Pressure Transmitter, refrigeration compressor & many more products of Danfoss Industries.
+              - link "Read More" [ref=e123] [cursor=pointer]:
+                - /url: /quote
+                - button "Read More" [ref=e124]
+          - generic [ref=e125]:
+            - img "Servo Motors & Drives" [ref=e127]
+            - generic [ref=e131]:
+              - generic [ref=e132]:
+                - img "Product 1" [ref=e133]
+                - img "Product 2" [ref=e134]
+                - img "Product 3" [ref=e135]
+              - heading "Servo Motors & Drives" [level=2] [ref=e136]
+              - paragraph [ref=e137]: NovaGen Automation dealing in Servo Motor, Servo Drive, PLC, HMI, Cable, CPU & other accessories of Siemens make.
+              - link "Read More" [ref=e138] [cursor=pointer]:
+                - /url: /products/siemens
+                - button "Read More" [ref=e139]
+        - button [ref=e140]:
+          - img
+        - button [ref=e141]:
+          - img
+        - generic [ref=e142]:
+          - button [ref=e143]
+          - button [ref=e144]
+          - button [ref=e145]
+      - generic [ref=e148]:
+        - generic [ref=e149]:
+          - img [ref=e151]
+          - heading "Danfoss" [level=3] [ref=e154]
+          - paragraph [ref=e155]: An extremely flexible and cost-effective drive suitable for all industry. Energy efficient technologies empower smart communities and industries to create healthier and more comfortable climates
+        - generic [ref=e156]:
+          - img [ref=e158]
+          - heading "Siemens" [level=3] [ref=e160]
+          - paragraph [ref=e161]: A comprehensive portfolio of reliable frequency converters, motors, cables and connectors for almost every industry and field of application satisfies the highest performance standards and quality requirements.
+        - generic [ref=e162]:
+          - img [ref=e164]
+          - heading "Panel" [level=3] [ref=e167]
+          - paragraph [ref=e168]: The systems are supplied complete with power supply, backplane, measures for EMC. Specifically customized panel with full installation service.
+        - generic [ref=e169]:
+          - img [ref=e171]
+          - heading "Vaccon" [level=3] [ref=e173]
+          - paragraph [ref=e174]: This range of modular medium-voltage (MV) drives empowers systems integrators and OEMs, delivering a whole new approach to attaining the ultimate in performance, exactly tailored to the needs of each application.
+      - generic [ref=e176]:
+        - heading "About Us" [level=2] [ref=e178]
+        - generic [ref=e179]:
+          - generic [ref=e181]:
+            - heading "NovaGen Automation" [level=2] [ref=e182]
+            - generic [ref=e183]:
+              - paragraph [ref=e184]: Inaugurated in the year 2003, at Ludhiana (Punjab, India), we, "NovaGen Automation" authorized Channel Partner with M/s Danfoss Industries Pvt Ltd & M/s Siemens Ltd.
+              - paragraph [ref=e185]: NovaGen Automation is one of the reliable Suppliers and Service Provider of superior quality assortment of AC Drives, Soft Starters, Harmonic Filter Active and Passive, Pressure Transmitter, Valve, Refrigeration Compressor, Touch Screen Panel, PLC Module, Analog Input Module, Servo Motor and Amplifier etc. These products are manufactured using the finest quality raw material and sophisticated technology at vendors' end. We are well-aware of the fact that maintaining quality is the prime requirement to flourish in any business that is why our professionals give their best to offer clients the best quality products.
+            - link "Read More" [ref=e186] [cursor=pointer]:
+              - /url: /about
+              - button "Read More" [ref=e187]:
+                - text: Read More
+                - img
+          - img "NovaGen Automation Office" [ref=e190]
+      - generic [ref=e192]:
+        - heading "Services" [level=2] [ref=e194]
+        - generic [ref=e195]:
+          - link "Danfoss Troubleshoot and fix your Danfoss products to ensure smooth operations and high reliability For AC drives please contact your local sales office for fix and troubleshooting by certified service engineer. Online support available. Danfoss" [ref=e196] [cursor=pointer]:
+            - /url: /services/danfoss
+            - generic [ref=e197] [cursor=pointer]:
+              - generic [ref=e198] [cursor=pointer]:
+                - img [ref=e200] [cursor=pointer]
+                - heading "Danfoss" [level=3] [ref=e203] [cursor=pointer]
+                - paragraph [ref=e204] [cursor=pointer]: Troubleshoot and fix your Danfoss products to ensure smooth operations and high reliability For AC drives please contact your local sales office for fix and troubleshooting by certified service engineer. Online support available.
+              - heading "Danfoss" [level=3] [ref=e206] [cursor=pointer]
+          - link "Siemens Our Service experts provide you with comprehensive support directly from the product manufacturer. Whether you have technical questions or need urgent product and system support, you can reach us via phone or online support request. Siemens" [ref=e207] [cursor=pointer]:
+            - /url: /services/siemens
+            - generic [ref=e208] [cursor=pointer]:
+              - generic [ref=e209] [cursor=pointer]:
+                - img [ref=e211] [cursor=pointer]
+                - heading "Siemens" [level=3] [ref=e213] [cursor=pointer]
+                - paragraph [ref=e214] [cursor=pointer]: Our Service experts provide you with comprehensive support directly from the product manufacturer. Whether you have technical questions or need urgent product and system support, you can reach us via phone or online support request.
+              - heading "Siemens" [level=3] [ref=e216] [cursor=pointer]
+          - link "Vaccon Vaccon strives to manufacture the best AC drives and inverters in the world with optimum process control and energy efficiency for electronic motors. Most drive failures can be avoided through preventative maintenance. Vaccon" [ref=e217] [cursor=pointer]:
+            - /url: /services/vaccon
+            - generic [ref=e218] [cursor=pointer]:
+              - generic [ref=e219] [cursor=pointer]:
+                - img [ref=e221] [cursor=pointer]
+                - heading "Vaccon" [level=3] [ref=e223] [cursor=pointer]
+                - paragraph [ref=e224] [cursor=pointer]: Vaccon strives to manufacture the best AC drives and inverters in the world with optimum process control and energy efficiency for electronic motors. Most drive failures can be avoided through preventative maintenance.
+              - heading "Vaccon" [level=3] [ref=e226] [cursor=pointer]
+      - generic [ref=e228]:
+        - heading "Our Professional Team" [level=2] [ref=e230]
+        - generic [ref=e231]:
+          - generic [ref=e232]:
+            - generic [ref=e233]:
+              - img "Sales Team" [ref=e234]
+              - generic [ref=e236]:
+                - heading "Sales Team" [level=3] [ref=e237]
+                - paragraph [ref=e238]: Professional Sales
+            - heading "Sales Team" [level=3] [ref=e240]:
+              - link "Sales Team" [ref=e241] [cursor=pointer]:
+                - /url: /team
+          - generic [ref=e242]:
+            - generic [ref=e243]:
+              - img "Technical Team" [ref=e244]
+              - generic [ref=e246]:
+                - heading "Technical Team" [level=3] [ref=e247]
+                - paragraph [ref=e248]: Expert Engineers
+            - heading "Technical Team" [level=3] [ref=e250]:
+              - link "Technical Team" [ref=e251] [cursor=pointer]:
+                - /url: /team
+          - generic [ref=e252]:
+            - generic [ref=e253]:
+              - img "Backend Team" [ref=e254]
+              - generic [ref=e256]:
+                - heading "Backend Team" [level=3] [ref=e257]
+                - paragraph [ref=e258]: Support Staff
+            - heading "Backend Team" [level=3] [ref=e260]:
+              - link "Backend Team" [ref=e261] [cursor=pointer]:
+                - /url: /team
+          - generic [ref=e262]:
+            - generic [ref=e263]:
+              - img [ref=e265]
+              - link "Read More" [ref=e271] [cursor=pointer]:
+                - /url: /team
+            - paragraph [ref=e273]:
+              - strong [ref=e274]: Our team
+              - text: has played a vital role behind every success achieved and we have highly dedicated and competitive team of professionals, who assists us in offering clients different products as per their needs. Moreover, our professionals are highly experienced and help us to procure premium quality products from some of the reliable vendors of the market as well.
+      - generic [ref=e276]:
+        - generic [ref=e277]:
+          - generic [ref=e278]: NovaGen
+          - heading "Vision & Mission" [level=2] [ref=e279]
+        - generic [ref=e280]:
+          - link "Vendor Base Strong relationships with leading industrial automation manufacturers" [ref=e281] [cursor=pointer]:
+            - /url: /vision#vendor
+            - generic [ref=e282] [cursor=pointer]:
+              - img [ref=e284] [cursor=pointer]
+              - heading "Vendor Base" [level=3] [ref=e287] [cursor=pointer]
+              - paragraph [ref=e288] [cursor=pointer]: Strong relationships with leading industrial automation manufacturers
+          - link "Our Value Commitment to quality, innovation, and customer satisfaction" [ref=e289] [cursor=pointer]:
+            - /url: /vision#value
+            - generic [ref=e290] [cursor=pointer]:
+              - img [ref=e292] [cursor=pointer]
+              - heading "Our Value" [level=3] [ref=e294] [cursor=pointer]
+              - paragraph [ref=e295] [cursor=pointer]: Commitment to quality, innovation, and customer satisfaction
+          - link "Our Promise Dedicated to providing reliable automation solutions" [ref=e296] [cursor=pointer]:
+            - /url: /vision#promise
+            - generic [ref=e297] [cursor=pointer]:
+              - img [ref=e299] [cursor=pointer]
+              - heading "Our Promise" [level=3] [ref=e304] [cursor=pointer]
+              - paragraph [ref=e305] [cursor=pointer]: Dedicated to providing reliable automation solutions
+          - link "Why Us?? Experience, expertise, and excellence in automation" [ref=e306] [cursor=pointer]:
+            - /url: /vision#why
+            - generic [ref=e307] [cursor=pointer]:
+              - img [ref=e309] [cursor=pointer]
+              - heading "Why Us??" [level=3] [ref=e312] [cursor=pointer]
+              - paragraph [ref=e313] [cursor=pointer]: Experience, expertise, and excellence in automation
+      - generic [ref=e315]:
+        - generic [ref=e316]:
+          - generic [ref=e317]: Latest Articles
+          - heading "Our Blog" [level=2] [ref=e318]
+        - generic [ref=e319]:
+          - generic [ref=e320]:
+            - img "Trial of Danfoss VFD at Pagro Food" [ref=e322]
+            - generic [ref=e323]:
+              - generic [ref=e324]:
+                - generic [ref=e325]:
+                  - img [ref=e326]
+                  - generic [ref=e329]: Admin
+                - generic [ref=e330]:
+                  - img [ref=e331]
+                  - generic [ref=e333]: 22 December 2020
+              - heading "Trial of Danfoss VFD at Pagro Food" [level=3] [ref=e334]:
+                - link "Trial of Danfoss VFD at Pagro Food" [ref=e335] [cursor=pointer]:
+                  - /url: /blog/1
+              - paragraph [ref=e336]: Successful installation and testing of Danfoss VFD system at Pagro Food processing facility.
+              - link "View More" [ref=e337] [cursor=pointer]:
+                - /url: /blog/1
+                - generic [ref=e338] [cursor=pointer]: View More
+                - img [ref=e339] [cursor=pointer]
+          - generic [ref=e341]:
+            - img "VFD Service at Molson Coors India Pvt LTD" [ref=e343]
+            - generic [ref=e344]:
+              - generic [ref=e345]:
+                - generic [ref=e346]:
+                  - img [ref=e347]
+                  - generic [ref=e350]: Admin
+                - generic [ref=e351]:
+                  - img [ref=e352]
+                  - generic [ref=e354]: 21 December 2020
+              - heading "VFD Service at Molson Coors India Pvt LTD" [level=3] [ref=e355]:
+                - link "VFD Service at Molson Coors India Pvt LTD" [ref=e356] [cursor=pointer]:
+                  - /url: /blog/2
+              - paragraph [ref=e357]: Comprehensive VFD maintenance and service provided to Molson Coors India facility.
+              - link "View More" [ref=e358] [cursor=pointer]:
+                - /url: /blog/2
+                - generic [ref=e359] [cursor=pointer]: View More
+                - img [ref=e360] [cursor=pointer]
+          - generic [ref=e362]:
+            - img "VFD installation at Bansal Spinning, Ludhiana" [ref=e364]
+            - generic [ref=e365]:
+              - generic [ref=e366]:
+                - generic [ref=e367]:
+                  - img [ref=e368]
+                  - generic [ref=e371]: Admin
+                - generic [ref=e372]:
+                  - img [ref=e373]
+                  - generic [ref=e375]: 20 January 2020
+              - heading "VFD installation at Bansal Spinning, Ludhiana" [level=3] [ref=e376]:
+                - link "VFD installation at Bansal Spinning, Ludhiana" [ref=e377] [cursor=pointer]:
+                  - /url: /blog/3
+              - paragraph [ref=e378]: Complete VFD installation project completed at Bansal Spinning mill in Ludhiana.
+              - link "View More" [ref=e379] [cursor=pointer]:
+                - /url: /blog/3
+                - generic [ref=e380] [cursor=pointer]: View More
+                - img [ref=e381] [cursor=pointer]
+  - contentinfo [ref=e383]:
+    - generic [ref=e385]:
+      - generic [ref=e386]:
+        - heading "NovaGen Automation" [level=3] [ref=e388]
+        - paragraph [ref=e389]: We at NovaGen Automation are continuously working to interface technology, systems & human resources to provide products & services that meets quality & performance of the customers.
+        - generic [ref=e390]:
+          - img [ref=e391]
+          - generic [ref=e394]: Pot No. 56, Akal sahay Nagar, Mundian Kalan, Chandigarh Road, Ludhiana- 141015
+      - generic [ref=e395]:
+        - heading "Quick Links" [level=4] [ref=e396]
+        - list [ref=e397]:
+          - listitem [ref=e398]:
+            - link "Home" [ref=e399] [cursor=pointer]:
+              - /url: /
+              - img [ref=e400] [cursor=pointer]
+              - generic [ref=e402] [cursor=pointer]: Home
+          - listitem [ref=e403]:
+            - link "About Us" [ref=e404] [cursor=pointer]:
+              - /url: /about
+              - img [ref=e405] [cursor=pointer]
+              - generic [ref=e407] [cursor=pointer]: About Us
+          - listitem [ref=e408]:
+            - link "Contact Us" [ref=e409] [cursor=pointer]:
+              - /url: /contact
+              - img [ref=e410] [cursor=pointer]
+              - generic [ref=e412] [cursor=pointer]: Contact Us
+          - listitem [ref=e413]:
+            - link "Enquiry" [ref=e414] [cursor=pointer]:
+              - /url: /contact
+              - img [ref=e415] [cursor=pointer]
+              - generic [ref=e417] [cursor=pointer]: Enquiry
+          - listitem [ref=e418]:
+            - link "Career" [ref=e419] [cursor=pointer]:
+              - /url: /career
+              - img [ref=e420] [cursor=pointer]
+              - generic [ref=e422] [cursor=pointer]: Career
+          - listitem [ref=e423]:
+            - link "FAQ" [ref=e424] [cursor=pointer]:
+              - /url: /faq
+              - img [ref=e425] [cursor=pointer]
+              - generic [ref=e427] [cursor=pointer]: FAQ
+      - generic [ref=e428]:
+        - heading "Contact Us" [level=4] [ref=e429]
+        - generic [ref=e430]:
+          - generic [ref=e431]:
+            - img [ref=e432]
+            - generic [ref=e434]:
+              - generic [ref=e435]: "Contact no:"
+              - link "+91 98786-28680" [ref=e436] [cursor=pointer]:
+                - /url: tel:+919878628680
+          - generic [ref=e437]:
+            - img [ref=e438]
+            - generic [ref=e440]:
+              - generic [ref=e441]: "Contact no:"
+              - link "+91 70874-88699" [ref=e442] [cursor=pointer]:
+                - /url: tel:+917087488699
+          - generic [ref=e443]:
+            - img [ref=e444]
+            - generic [ref=e447]:
+              - generic [ref=e448]: "Email:"
+              - link "office@novagenautomation.com" [ref=e449] [cursor=pointer]:
+                - /url: mailto:office@novagenautomation.com
+          - generic [ref=e450]:
+            - img [ref=e451]
+            - generic [ref=e454]:
+              - generic [ref=e455]: "Email:"
+              - link "info@novagenautomation.com" [ref=e456] [cursor=pointer]:
+                - /url: mailto:info@novagenautomation.com
+        - generic [ref=e457]:
+          - heading "Follow Us:" [level=5] [ref=e458]
+          - generic [ref=e459]:
+            - link [ref=e460] [cursor=pointer]:
+              - /url: https://www.facebook.com
+              - img [ref=e461] [cursor=pointer]
+            - link [ref=e463] [cursor=pointer]:
+              - /url: https://twitter.com
+              - img [ref=e464] [cursor=pointer]
+            - link [ref=e466] [cursor=pointer]:
+              - /url: https://linkedin.com
+              - img [ref=e467] [cursor=pointer]
+            - link [ref=e471] [cursor=pointer]:
+              - /url: https://instagram.com
+              - img [ref=e472] [cursor=pointer]
+            - link [ref=e475] [cursor=pointer]:
+              - /url: https://youtube.com
+              - img [ref=e476] [cursor=pointer]
+      - generic [ref=e479]:
+        - heading "Reach Us" [level=4] [ref=e480]
+        - iframe [ref=e482]:
+          
+    - generic [ref=e485]: © 2025 NovaGen Automation. Designed By Kalsi IT Solution.
+  - region "Notifications (F8)":
+    - list
+```

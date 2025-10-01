@@ -1,4 +1,4 @@
-import { Building, Diamond, Handshake, HelpCircle, Target, Lightbulb, Users, Award } from 'lucide-react'
+import { Building, Diamond, Handshake, HelpCircle, Target, Lightbulb, Users, Award, Check } from 'lucide-react'
 
 export default function VisionPage() {
   return (
@@ -184,19 +184,19 @@ export default function VisionPage() {
                   <h3 className="text-xl font-semibold mb-4">To Our Customers</h3>
                   <ul className="space-y-2">
                     <li className="flex items-start space-x-2">
-                      <span className="text-blue-200">✓</span>
+                      <Check className="h-5 w-5 text-blue-200 flex-shrink-0 mt-0.5" />
                       <span>Uncompromising quality in all products and services</span>
                     </li>
                     <li className="flex items-start space-x-2">
-                      <span className="text-blue-200">✓</span>
+                      <Check className="h-5 w-5 text-blue-200 flex-shrink-0 mt-0.5" />
                       <span>Timely delivery and project execution</span>
                     </li>
                     <li className="flex items-start space-x-2">
-                      <span className="text-blue-200">✓</span>
+                      <Check className="h-5 w-5 text-blue-200 flex-shrink-0 mt-0.5" />
                       <span>24/7 technical support and maintenance</span>
                     </li>
                     <li className="flex items-start space-x-2">
-                      <span className="text-blue-200">✓</span>
+                      <Check className="h-5 w-5 text-blue-200 flex-shrink-0 mt-0.5" />
                       <span>Continuous improvement and innovation</span>
                     </li>
                   </ul>
@@ -205,19 +205,19 @@ export default function VisionPage() {
                   <h3 className="text-xl font-semibold mb-4">To Our Industry</h3>
                   <ul className="space-y-2">
                     <li className="flex items-start space-x-2">
-                      <span className="text-blue-200">✓</span>
+                      <Check className="h-5 w-5 text-blue-200 flex-shrink-0 mt-0.5" />
                       <span>Promoting energy-efficient solutions</span>
                     </li>
                     <li className="flex items-start space-x-2">
-                      <span className="text-blue-200">✓</span>
+                      <Check className="h-5 w-5 text-blue-200 flex-shrink-0 mt-0.5" />
                       <span>Advancing automation technology</span>
                     </li>
                     <li className="flex items-start space-x-2">
-                      <span className="text-blue-200">✓</span>
+                      <Check className="h-5 w-5 text-blue-200 flex-shrink-0 mt-0.5" />
                       <span>Maintaining highest safety standards</span>
                     </li>
                     <li className="flex items-start space-x-2">
-                      <span className="text-blue-200">✓</span>
+                      <Check className="h-5 w-5 text-blue-200 flex-shrink-0 mt-0.5" />
                       <span>Building sustainable industrial practices</span>
                     </li>
                   </ul>

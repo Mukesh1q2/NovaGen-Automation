@@ -2,19 +2,21 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
-import { Menu, Search, Clock, Mail, User, Facebook, Twitter, Linkedin, Instagram, Youtube } from 'lucide-react'
+import { Menu, Search, Clock, Mail, User, X, Facebook, Twitter, Linkedin, Instagram, Youtube } from 'lucide-react'
 import { ThemeSwitcher } from '@/components/ThemeSwitcher'
 
 export default function Header() {
+  const router = useRouter()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
   const [navigation, setNavigation] = useState<any[]>([
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
-    { name: 'Product', href: '/products', subItems: [
+    { name: 'Products', href: '/products', subItems: [
       { name: 'Danfoss (AC Drives)', href: '/products/danfoss' },
       { name: 'Siemens', href: '/products/siemens' },
       { name: 'Vaccon', href: '/products/vaccon' },
@@ -37,32 +39,49 @@ export default function Header() {
     }
   }
 
-  // Load custom pages from localStorage after component mounts
+  // Load custom pages from API after component mounts
   useEffect(() => {
+    let active = true
     setIsMounted(true)
-    try {
-      const storedPages = localStorage.getItem('cms_pages')
-      if (storedPages) {
-        const pages = JSON.parse(storedPages)
-        // Filter pages that should be shown in menu
-        const menuPages = pages
+
+    const fetchPages = async () => {
+      try {
+        const response = await fetch('/api/pages', { cache: 'no-store' })
+        if (!response.ok) {
+          throw new Error('Failed to load pages')
+        }
+        const data = await response.json()
+        if (!active) return
+
+        const menuPages = (data.pages ?? [])
           .filter((page: any) => page.showInMenu && page.isActive)
-          .sort((a: any, b: any) => a.order - b.order)
+          .sort((a: any, b: any) => (a.order ?? 0) - (b.order ?? 0))
           .map((page: any) => ({
             name: page.title,
-            href: page.slug
+            href: page.slug.startsWith('/') ? page.slug : `/${page.slug}`,
           }))
-        
-        // Add custom pages to navigation (before Contact Us)
+
         if (menuPages.length > 0) {
-          const contactIndex = navigation.findIndex(item => item.name === 'Contact Us')
-          const newNavigation = [...navigation]
-          newNavigation.splice(contactIndex, 0, ...menuPages)
-          setNavigation(newNavigation)
+          setNavigation((current) => {
+            const contactIndex = current.findIndex((item) => item.name === 'Contact Us')
+            const insertionIndex = contactIndex >= 0 ? contactIndex : current.length
+            const filtered = current.filter((item) => !menuPages.some((page) => page.name === item.name))
+            return [
+              ...filtered.slice(0, insertionIndex),
+              ...menuPages,
+              ...filtered.slice(insertionIndex),
+            ]
+          })
         }
+      } catch (error) {
+        console.error('Failed to load custom pages:', error)
       }
-    } catch (error) {
-      console.error('Failed to load custom pages:', error)
+    }
+
+    void fetchPages()
+
+    return () => {
+      active = false
     }
   }, [])
 
@@ -76,14 +95,14 @@ export default function Header() {
       {/* Skip to content link */}
       <a 
         href="#main-content" 
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 bg-blue-600 text-white px-4 py-2 rounded-md"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 bg-primary text-primary-foreground px-4 py-2 rounded-md"
         onClick={skipToContent}
       >
         Skip to main content
       </a>
       
       {/* Top Bar */}
-      <div className="bg-gray-100 py-2">
+      <div className="bg-gradient-to-r from-gray-50 to-gray-100 py-2 border-b border-gray-200">
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <div className="flex space-x-4 mb-2 sm:mb-0">
@@ -138,8 +157,9 @@ export default function Header() {
               <button 
                 onClick={() => setIsSearchOpen(false)}
                 className="text-gray-500 hover:text-gray-700"
+                aria-label="Close search"
               >
-                ✕
+                <X className="h-5 w-5" />
               </button>
             </div>
             <form onSubmit={(e) => { 
@@ -147,7 +167,7 @@ export default function Header() {
               const formData = new FormData(e.target as HTMLFormElement);
               const query = formData.get('search') as string;
               if (query?.trim()) {
-                window.location.href = `/search?q=${encodeURIComponent(query.trim())}`;
+                router.push(`/search?q=${encodeURIComponent(query.trim())}`);
               }
             }}>
               <div className="flex space-x-2">
@@ -155,7 +175,7 @@ export default function Header() {
                   type="text"
                   name="search"
                   placeholder="Search products, pages, services..."
-                  className="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
                   autoFocus
                 />
                 <Button type="submit">
@@ -168,41 +188,47 @@ export default function Header() {
       )}
 
       {/* Main Header */}
-      <header className="bg-white shadow-md sticky top-0 z-40">
+      <header className="bg-white shadow-lg sticky top-0 z-40 backdrop-blur-sm bg-white/95 transition-all duration-300">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between py-4">
             {/* Logo */}
-            <Link href="/" className="flex items-center">
-              <div className="text-2xl font-bold text-blue-600">
+            <Link href="/" className="flex items-center group">
+              <div className="text-2xl font-bold bg-gradient-to-r from-primary to-primary/80 bg-clip-text text-transparent transition-all duration-300 group-hover:from-primary/90 group-hover:to-primary">
                 NovaGen Automation
               </div>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-6" aria-label="Main navigation">
-              {navigation.map((item, index) => (
-                <div key={`${item.name}-${index}`} className="relative group">
+            <nav className="hidden lg:flex items-center space-x-1" aria-label="Main navigation">
+              {navigation.map((item) => (
+                <div key={item.name} className="relative group">
                   <Link
                     href={item.href}
-                    className="text-gray-700 hover:text-blue-600 transition-colors font-medium"
+                    className="text-gray-700 hover:text-blue-600 transition-all duration-300 font-medium px-3 py-2 rounded-lg hover:bg-blue-50 relative overflow-hidden group"
+                    aria-label={`${item.name} main`}
                     {...(item.subItems ? { 'aria-haspopup': 'true', 'aria-expanded': 'false' } : {})}
                   >
-                    {item.name}
+                    <span className="relative z-10">{item.name}</span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-700 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></span>
                   </Link>
                   {item.subItems && (
                     <div 
-                      className="absolute top-full left-0 mt-2 w-64 bg-white shadow-lg rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200"
+                      className="absolute top-full left-0 mt-2 w-64 bg-white shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 border border-gray-100"
                       role="menu"
                       aria-label={`${item.name} submenu`}
                     >
-                      {item.subItems.map((subItem, subIndex) => (
+                      {item.subItems.map((subItem, index) => (
                         <Link
-                          key={`${subItem.name}-${subIndex}`}
+                          key={subItem.name}
                           href={subItem.href}
-                          className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600 transition-colors"
+                          className="block px-4 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100 hover:text-blue-700 transition-all duration-200 relative group/item border-b border-gray-100 last:border-b-0 first:rounded-t-xl last:rounded-b-xl"
                           role="menuitem"
+                          aria-label={`${subItem.name} from dropdown`}
                         >
-                          {subItem.name}
+                          <span className="flex items-center">
+                            <span className="w-1 h-1 rounded-full bg-blue-600 opacity-0 group-hover/item:opacity-100 transition-opacity mr-2"></span>
+                            {subItem.name}
+                          </span>
                         </Link>
                       ))}
                     </div>
@@ -214,7 +240,7 @@ export default function Header() {
             {/* Get Quote Button */}
             <div className="hidden lg:block">
               <Link href="/quote">
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+                <Button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
                   Get A Quote
                 </Button>
               </Link>
@@ -235,7 +261,7 @@ export default function Header() {
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <nav className="flex flex-col space-y-4 mt-6" aria-label="Mobile navigation">
                   {navigation.map((item, index) => (
-                    <div key={`${item.name}-${index}`}>
+                    <div key={item.name}>
                       {item.subItems ? (
                         <div>
                           <button
@@ -257,12 +283,13 @@ export default function Header() {
                             id={`submenu-${item.name.toLowerCase().replace(/\s+/g, '-')}`}
                             className="ml-4 mt-2 space-y-2 hidden"
                           >
-                            {item.subItems.map((subItem, subIndex) => (
+                            {item.subItems.map((subItem) => (
                               <Link
-                                key={`${subItem.name}-${subIndex}`}
+                                key={subItem.name}
                                 href={subItem.href}
                                 className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
                                 onClick={() => setIsMenuOpen(false)}
+                                aria-label={`${subItem.name} mobile submenu`}
                               >
                                 {subItem.name}
                               </Link>
@@ -271,9 +298,11 @@ export default function Header() {
                         </div>
                       ) : (
                         <Link
+                          key={item.name}
                           href={item.href}
                           className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-lg block"
                           onClick={() => setIsMenuOpen(false)}
+                          aria-label={`${item.name} mobile`}
                         >
                           {item.name}
                         </Link>

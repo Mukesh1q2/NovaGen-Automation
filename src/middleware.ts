@@ -1,32 +1,43 @@
-// middleware.ts - Next.js middleware to protect admin routes
-
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
+import { SESSION_COOKIE_NAME, verifySessionToken } from '@/lib/auth'
 
-export function middleware(request: NextRequest) {
-  // Check if the request is for admin routes
-  if (request.nextUrl.pathname.startsWith('/admin')) {
-    // Skip authentication for login page
-    if (request.nextUrl.pathname === '/admin/login') {
-      return NextResponse.next()
-    }
-    
-    // For demo purposes, we'll check for a cookie
-    // In production, you would implement proper authentication
-    const adminToken = request.cookies.get('admin_token')
-    
-    if (!adminToken || adminToken.value !== 'demo_admin_token') {
-      // Redirect to login page
-      const loginUrl = new URL('/admin/login', request.url)
-      loginUrl.searchParams.set('from', request.nextUrl.pathname)
-      return NextResponse.redirect(loginUrl)
-    }
-  }
-  
-  return NextResponse.next()
-}
-
-// Configure which routes to run middleware on
 export const config = {
   matcher: ['/admin/:path*'],
+}
+
+export async function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl
+  console.log('[Middleware] Checking path:', pathname)
+
+  if (pathname === '/admin/login') {
+    console.log('[Middleware] Login page - allowing access')
+    return NextResponse.next()
+  }
+
+  const token = request.cookies.get(SESSION_COOKIE_NAME)?.value
+  console.log('[Middleware] Session token present:', !!token)
+  if (!token) {
+    console.log('[Middleware] No token - redirecting to login')
+    const loginUrl = new URL('/admin/login', request.url)
+    loginUrl.searchParams.set('from', pathname)
+    return NextResponse.redirect(loginUrl)
+  }
+
+  const session = await verifySessionToken(token)
+  console.log('[Middleware] Session verified:', !!session, session ? `for user: ${session.email}` : '')
+  if (!session) {
+    console.log('[Middleware] Invalid session - redirecting to login and clearing cookie')
+    const loginUrl = new URL('/admin/login', request.url)
+    loginUrl.searchParams.set('from', pathname)
+    const response = NextResponse.redirect(loginUrl)
+    response.cookies.set(SESSION_COOKIE_NAME, '', {
+      path: '/',
+      maxAge: 0,
+    })
+    return response
+  }
+
+  console.log('[Middleware] Access granted to:', pathname)
+  return NextResponse.next()
 }

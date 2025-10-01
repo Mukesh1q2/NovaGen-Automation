@@ -2,7 +2,13 @@
 
 export async function fetchCategories() {
   try {
-    const response = await fetch('/api/categories')
+    // Use absolute URL for server-side rendering
+    const baseUrl = typeof window === 'undefined'
+      ? process.env.NEXT_PUBLIC_BASE_URL
+        || process.env.NEXT_PUBLIC_SITE_URL
+        || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
+      : '';
+    const response = await fetch(`${baseUrl}/api/categories`)
     if (!response.ok) {
       throw new Error('Failed to fetch categories')
     }
@@ -15,7 +21,13 @@ export async function fetchCategories() {
 
 export async function fetchProductsByCategory(slug: string) {
   try {
-    const response = await fetch(`/api/categories/${slug}/products`)
+    // Use absolute URL for server-side rendering
+    const baseUrl = typeof window === 'undefined'
+      ? process.env.NEXT_PUBLIC_BASE_URL
+        || process.env.NEXT_PUBLIC_SITE_URL
+        || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
+      : '';
+    const response = await fetch(`${baseUrl}/api/categories/${slug}/products`)
     if (!response.ok) {
       throw new Error('Failed to fetch products')
     }

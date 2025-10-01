@@ -1,0 +1,275 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - button "Open Next.js Dev Tools" [ref=e7] [cursor=pointer]:
+    - img [ref=e8] [cursor=pointer]
+  - alert [ref=e13]
+  - link "Skip to main content" [ref=e14]:
+    - /url: "#main-content"
+  - generic [ref=e17]:
+    - generic [ref=e18]:
+      - link [ref=e19]:
+        - /url: https://www.facebook.com
+        - img [ref=e20]
+      - link [ref=e22]:
+        - /url: https://twitter.com
+        - img [ref=e23]
+      - link [ref=e25]:
+        - /url: https://linkedin.com
+        - img [ref=e26]
+      - link [ref=e30]:
+        - /url: https://instagram.com
+        - img [ref=e31]
+      - link [ref=e34]:
+        - /url: https://youtube.com
+        - img [ref=e35]
+      - button "Toggle theme" [ref=e38]:
+        - img
+        - generic [ref=e39]: Toggle theme
+    - generic [ref=e40]:
+      - button "Search" [ref=e41]:
+        - img [ref=e42]
+        - generic [ref=e45]: Search
+      - generic [ref=e46]:
+        - img [ref=e47]
+        - generic [ref=e50]: "Mon - Sat: 9.30 - 18.30"
+      - link "info@novagenautomation.com" [ref=e51]:
+        - /url: mailto:info@novagenautomation.com
+        - img [ref=e52]
+        - generic [ref=e55]: info@novagenautomation.com
+      - link "Login / SignUp" [ref=e56]:
+        - /url: /login
+        - img [ref=e57]
+        - generic [ref=e60]: Login / SignUp
+  - banner [ref=e61]:
+    - generic [ref=e63]:
+      - link "NovaGen Automation" [ref=e64]:
+        - /url: /
+        - generic [ref=e65]: NovaGen Automation
+      - navigation "Main navigation" [ref=e66]:
+        - link "Home main" [ref=e68]:
+          - /url: /
+          - text: Home
+        - link "About Us main" [ref=e70]:
+          - /url: /about
+          - text: About Us
+        - link "Products main" [ref=e72]:
+          - /url: /products
+          - text: Products
+        - link "Vision & Mission main" [ref=e74]:
+          - /url: /vision
+          - text: Vision & Mission
+        - link "Gallery main" [ref=e76]:
+          - /url: /gallery
+          - text: Gallery
+        - link "Blog main" [ref=e78]:
+          - /url: /blog
+          - text: Blog
+        - link "Contact Us main" [ref=e80]:
+          - /url: /contact
+          - text: Contact Us
+      - link "Get A Quote" [ref=e82]:
+        - /url: /quote
+        - button "Get A Quote" [ref=e83]
+  - main [ref=e84]:
+    - generic [ref=e85]:
+      - navigation [ref=e87]:
+        - generic [ref=e88]:
+          - link "Dashboard" [ref=e89]:
+            - /url: /admin
+            - img [ref=e90]
+            - text: Dashboard
+          - link "Products" [ref=e92]:
+            - /url: /admin/products
+            - img [ref=e93]
+            - text: Products
+          - link "Categories" [ref=e97]:
+            - /url: /admin/categories
+            - img [ref=e98]
+            - text: Categories
+          - link "Pages" [ref=e100]:
+            - /url: /admin/pages
+            - img [ref=e101]
+            - text: Pages
+          - link "Users" [ref=e104]:
+            - /url: /admin/users
+            - img [ref=e105]
+            - text: Users
+          - link "Slider" [ref=e108]:
+            - /url: /admin/slider
+            - img [ref=e109]
+            - text: Slider
+          - link "Themes" [ref=e113]:
+            - /url: /admin/themes
+            - img [ref=e114]
+            - text: Themes
+        - generic [ref=e120]:
+          - button "Logout" [ref=e121]:
+            - img [ref=e122]
+            - text: Logout
+          - button "Toggle theme" [ref=e126]:
+            - img
+            - generic [ref=e127]: Toggle theme
+      - generic [ref=e130]:
+        - generic [ref=e131]:
+          - heading "Dashboard" [level=1] [ref=e132]
+          - paragraph [ref=e133]: Welcome to your admin panel
+        - generic [ref=e134]:
+          - generic [ref=e136]:
+            - img [ref=e138]
+            - generic [ref=e142]:
+              - paragraph [ref=e143]: Products
+              - paragraph [ref=e144]: "24"
+          - generic [ref=e146]:
+            - img [ref=e148]
+            - generic [ref=e150]:
+              - paragraph [ref=e151]: Categories
+              - paragraph [ref=e152]: "6"
+          - generic [ref=e154]:
+            - img [ref=e156]
+            - generic [ref=e159]:
+              - paragraph [ref=e160]: Pages
+              - paragraph [ref=e161]: "12"
+          - generic [ref=e163]:
+            - img [ref=e165]
+            - generic [ref=e170]:
+              - paragraph [ref=e171]: Users
+              - paragraph [ref=e172]: "3"
+        - generic [ref=e173]:
+          - generic [ref=e174]:
+            - heading "Products Added Over Time" [level=2] [ref=e175]
+            - img [ref=e176]
+          - generic [ref=e177]:
+            - heading "Product Categories Distribution" [level=2] [ref=e178]
+            - img [ref=e179]
+        - generic [ref=e180]:
+          - generic [ref=e181]:
+            - heading "Recent Products" [level=2] [ref=e182]
+            - generic [ref=e183]:
+              - generic [ref=e186]:
+                - heading "Product 1" [level=3] [ref=e187]
+                - paragraph [ref=e188]: Category
+              - generic [ref=e191]:
+                - heading "Product 2" [level=3] [ref=e192]
+                - paragraph [ref=e193]: Category
+              - generic [ref=e196]:
+                - heading "Product 3" [level=3] [ref=e197]
+                - paragraph [ref=e198]: Category
+          - generic [ref=e199]:
+            - heading "Quick Actions" [level=2] [ref=e200]
+            - generic [ref=e201]:
+              - button "Add New Product" [ref=e202]
+              - button "Create New Page" [ref=e203]
+              - button "Add User" [ref=e204]
+  - contentinfo [ref=e205]:
+    - generic [ref=e207]:
+      - generic [ref=e208]:
+        - heading "NovaGen Automation" [level=3] [ref=e210]
+        - paragraph [ref=e211]: We at NovaGen Automation are continuously working to interface technology, systems & human resources to provide products & services that meets quality & performance of the customers.
+        - generic [ref=e212]:
+          - img [ref=e213]
+          - generic [ref=e216]: Pot No. 56, Akal sahay Nagar, Mundian Kalan, Chandigarh Road, Ludhiana- 141015
+      - generic [ref=e217]:
+        - heading "Quick Links" [level=4] [ref=e218]
+        - list [ref=e219]:
+          - listitem [ref=e220]:
+            - link "Home" [ref=e221]:
+              - /url: /
+              - img [ref=e222]
+              - generic [ref=e224]: Home
+          - listitem [ref=e225]:
+            - link "About Us" [ref=e226]:
+              - /url: /about
+              - img [ref=e227]
+              - generic [ref=e229]: About Us
+          - listitem [ref=e230]:
+            - link "Contact Us" [ref=e231]:
+              - /url: /contact
+              - img [ref=e232]
+              - generic [ref=e234]: Contact Us
+          - listitem [ref=e235]:
+            - link "Enquiry" [ref=e236]:
+              - /url: /contact
+              - img [ref=e237]
+              - generic [ref=e239]: Enquiry
+          - listitem [ref=e240]:
+            - link "Career" [ref=e241]:
+              - /url: /career
+              - img [ref=e242]
+              - generic [ref=e244]: Career
+          - listitem [ref=e245]:
+            - link "FAQ" [ref=e246]:
+              - /url: /faq
+              - img [ref=e247]
+              - generic [ref=e249]: FAQ
+      - generic [ref=e250]:
+        - heading "Contact Us" [level=4] [ref=e251]
+        - generic [ref=e252]:
+          - generic [ref=e253]:
+            - img [ref=e254]
+            - generic [ref=e256]:
+              - generic [ref=e257]: "Contact no:"
+              - link "+91 98786-28680" [ref=e258]:
+                - /url: tel:+919878628680
+          - generic [ref=e259]:
+            - img [ref=e260]
+            - generic [ref=e262]:
+              - generic [ref=e263]: "Contact no:"
+              - link "+91 70874-88699" [ref=e264]:
+                - /url: tel:+917087488699
+          - generic [ref=e265]:
+            - img [ref=e266]
+            - generic [ref=e269]:
+              - generic [ref=e270]: "Email:"
+              - link "office@novagenautomation.com" [ref=e271]:
+                - /url: mailto:office@novagenautomation.com
+          - generic [ref=e272]:
+            - img [ref=e273]
+            - generic [ref=e276]:
+              - generic [ref=e277]: "Email:"
+              - link "info@novagenautomation.com" [ref=e278]:
+                - /url: mailto:info@novagenautomation.com
+        - generic [ref=e279]:
+          - heading "Follow Us:" [level=5] [ref=e280]
+          - generic [ref=e281]:
+            - link [ref=e282]:
+              - /url: https://www.facebook.com
+              - img [ref=e283]
+            - link [ref=e285]:
+              - /url: https://twitter.com
+              - img [ref=e286]
+            - link [ref=e288]:
+              - /url: https://linkedin.com
+              - img [ref=e289]
+            - link [ref=e293]:
+              - /url: https://instagram.com
+              - img [ref=e294]
+            - link [ref=e297]:
+              - /url: https://youtube.com
+              - img [ref=e298]
+      - generic [ref=e301]:
+        - heading "Reach Us" [level=4] [ref=e302]
+        - iframe [ref=e304]:
+          - generic [ref=f1e3]:
+            - generic:
+              - button "Keyboard shortcuts"
+            - region "Map" [ref=f1e4]
+            - generic [ref=f1e5]:
+              - iframe [ref=f1e21]:
+                
+              - link "View larger map" [ref=f1e27]:
+                - /url: https://maps.google.com/maps?ll=30.88113,75.937643&z=17&t=h&hl=en&gl=IN&mapclient=embed&cid=11032727440627180268
+              - img "Google" [ref=f1e29]
+              - generic [ref=f1e30]:
+                - button "Keyboard shortcuts" [ref=f1e36] [cursor=pointer]
+                - button "Map Data" [ref=f1e42] [cursor=pointer]
+                - link "Terms (opens in new tab)" [ref=f1e47] [cursor=pointer]:
+                  - /url: https://www.google.com/intl/en_IN/help/terms_maps.html
+                  - text: Terms
+                - link "Report a map error" [ref=f1e52]:
+                  - /url: https://www.google.com/maps/@30.88113,75.9376426,17z/data=!3m1!1e3!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3
+    - generic [ref=e307]: © 2025 NovaGen Automation. Designed By Kalsi IT Solution.
+  - region "Notifications (F8)":
+    - list
+```

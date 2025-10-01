@@ -1,0 +1,1443 @@
+[33m[nodemon] 3.1.10[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): server.ts src\**\*[39m
+[33m[nodemon] watching extensions: ts,tsx,js,jsx[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+> Ready on http://localhost:3000
+> Socket.IO server running at ws://localhost:3000/api/socketio
+ ○ Compiling / ...
+ ✓ Compiled / in 3.6s (941 modules)
+ GET / 200 in 5214ms
+ GET / 200 in 541ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 772ms (931 modules)
+ GET /api/placeholder/400/300 404 in 1633ms
+ GET /images/hero/company-office.jpg 404 in 642ms
+ GET /images/team/sales-team.jpg 404 in 1226ms
+ GET /images/team/technical-team.jpg 404 in 1256ms
+ ⨯ The requested resource isn't a valid image for /images/hero/company-office.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/team/sales-team.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/team/technical-team.jpg received null
+ ○ Compiling /favicon.ico ...
+ ✓ Compiled /favicon.ico in 1337ms (592 modules)
+ ✓ Compiled /api/slides in 2ms (592 modules)
+ GET /images/team/backend-team.jpg 404 in 3282ms
+ ⨯ The requested resource isn't a valid image for /images/team/backend-team.jpg received null
+ ✓ Compiled in 1498ms (1120 modules)
+ GET /favicon.ico 200 in 7705ms
+ GET /api/pages 200 in 7282ms
+ GET /api/slides 200 in 7286ms
+ GET /images/products/ac-drive-1.jpg 404 in 5031ms
+ ⨯ The requested resource isn't a valid image for /images/products/ac-drive-1.jpg received null
+ GET /images/products/ac-drive-2.jpg 404 in 927ms
+ ⨯ The requested resource isn't a valid image for /images/products/ac-drive-2.jpg received null
+ GET /images/products/ac-drive-3.jpg 404 in 1887ms
+ GET /images/products/filter-drier-2.jpg 404 in 1910ms
+ GET /images/products/filter-drier-1.jpg 404 in 1935ms
+ ⨯ The requested resource isn't a valid image for /images/products/ac-drive-3.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/products/filter-drier-2.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/products/filter-drier-1.jpg received null
+ GET /images/products/servo-1.jpg 404 in 2144ms
+ GET /images/products/servo-2.jpg 404 in 1737ms
+ ⨯ The requested resource isn't a valid image for /images/products/servo-1.jpg received null
+ ⨯ The requested resource isn't a valid image for /images/products/servo-2.jpg received null
+ GET /images/products/servo-3.jpg 404 in 1131ms
+ ⨯ The requested resource isn't a valid image for /images/products/servo-3.jpg received null
+ GET /favicon.ico 200 in 42ms
+ ○ Compiling /api/categories ...
+ ✓ Compiled /api/categories in 4.2s (1115 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json',
+  page: '/api/categories'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 3.8s (1455 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json',
+  page: '/api/categories'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json'
+}
+ GET /api/categories 500 in 13517ms
+ GET /api/categories 500 in 296ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json'
+}
+ GET / 500 in 1686ms
+ GET / 500 in 344ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json'
+}
+ GET / 500 in 1501ms
+ GET / 500 in 371ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json'
+}
+ GET / 500 in 1179ms
+ GET / 500 in 346ms
+ ✓ Compiled /favicon.ico in 320ms (949 modules)
+ ⨯ Error: Cannot find module './4586.js'
+Require stack:
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\webpack-runtime.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\favicon.ico\route.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\require.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\load-components.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\utils.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\options.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\index.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\next.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\server.ts
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\favicon.ico\route.js:1:96916)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\favicon.ico\route.js:1:96967) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/favicon.ico'
+}
+ GET /favicon.ico 500 in 436ms
+   Reload env: .env
+ ✓ Compiled in 1253ms (1175 modules)
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 640ms (671 modules)
+ ⨯ Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\vendor-chunks\next.js'
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\_not-found\page.js:465:47)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\_not-found\page.js:468:3) {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\server\\vendor-chunks\\next.js'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 530ms (1271 modules)
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\server\\pages\\_document.js'
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\server\\pages\\_document.js'
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ GET / 500 in 2339ms
+ GET / 500 in 85ms
+ ✓ Compiled /favicon.ico in 262ms (780 modules)
+ GET /favicon.ico 200 in 673ms
+ ○ Compiling /api/categories ...
+ ✓ Compiled /api/categories in 1938ms (950 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json',
+  page: '/api/categories'
+}
+ ⨯ Error: Cannot find module './5611.js'
+Require stack:
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\webpack-runtime.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\api\categories\route.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\require.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\load-components.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\utils.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\options.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\index.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\next.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\server.ts
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js:1:327)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js:1:374) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json',
+  page: '/api/categories'
+}
+ ⨯ Error: Cannot find module './5611.js'
+Require stack:
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\webpack-runtime.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\api\categories\route.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\require.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\load-components.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\utils.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\options.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\index.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\next.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\server.ts
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js:1:327)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js:1:374) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json'
+}
+ GET /api/categories 500 in 4110ms
+ GET /api/categories 500 in 187ms
+ ⨯ Error: Cannot find module './4586.js'
+Require stack:
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\webpack-runtime.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\api\categories\route.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\require.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\load-components.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\utils.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\options.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\index.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\next.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\server.ts
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\page.js:2:36886)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\page.js:2:36943) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ⨯ Error: Cannot find module './5611.js'
+Require stack:
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\webpack-runtime.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\api\categories\route.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\require.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\load-components.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\utils.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\options.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\index.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\next.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\server.ts
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js:1:327)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js:1:374) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+Error: Cannot find module './4586.js'
+Require stack:
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\webpack-runtime.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\api\categories\route.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\require.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\load-components.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\utils.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\options.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\index.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\next.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\server.ts
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\page.js:2:36886)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\page.js:2:36943) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ⨯ Error: Cannot find module './5611.js'
+Require stack:
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\webpack-runtime.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\api\categories\route.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\require.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\load-components.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\utils.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\options.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\index.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\next.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\server.ts
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js:1:327)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js:1:374) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[Error: ENOENT: no such file or directory, open 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\prerender-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\prerender-manifest.json'
+}
+ GET / 500 in 1037ms
+ GET / 500 in 185ms
+ ⨯ Error: Cannot find module './4586.js'
+Require stack:
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\webpack-runtime.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\api\categories\route.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\require.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\load-components.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\utils.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\options.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\index.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\next.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\server.ts
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\page.js:2:36886)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\page.js:2:36943) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ⨯ Error: Cannot find module './5611.js'
+Require stack:
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\webpack-runtime.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\api\categories\route.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\require.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\load-components.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\utils.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\options.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\index.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\next.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\server.ts
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js:1:327)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js:1:374) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+Error: Cannot find module './4586.js'
+Require stack:
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\webpack-runtime.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\api\categories\route.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\require.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\load-components.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\utils.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\options.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\index.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\next.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\server.ts
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\page.js:2:36886)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\page.js:2:36943) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ⨯ Error: Cannot find module './5611.js'
+Require stack:
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\webpack-runtime.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\api\categories\route.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\require.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\load-components.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\utils.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\options.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\index.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\next.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\server.ts
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js:1:327)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js:1:374) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ GET / 500 in 319ms
+ GET / 500 in 87ms
+ ⨯ Error: Cannot find module './4586.js'
+Require stack:
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\webpack-runtime.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\api\categories\route.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\require.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\load-components.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\utils.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\options.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\index.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\next.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\server.ts
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\page.js:2:36886)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\page.js:2:36943) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ⨯ Error: Cannot find module './5611.js'
+Require stack:
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\webpack-runtime.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\api\categories\route.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\require.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\load-components.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\utils.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\options.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\index.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\next.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\server.ts
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js:1:327)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js:1:374) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+Error: Cannot find module './4586.js'
+Require stack:
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\webpack-runtime.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\api\categories\route.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\require.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\load-components.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\utils.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\options.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\index.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\next.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\server.ts
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\page.js:2:36886)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\page.js:2:36943) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ⨯ Error: Cannot find module './5611.js'
+Require stack:
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\webpack-runtime.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\api\categories\route.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\require.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\load-components.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\utils.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\options.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\index.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\next.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\server.ts
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js:1:327)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js:1:374) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ GET / 500 in 353ms
+ GET / 500 in 140ms
+ ⨯ Error: Cannot find module './4586.js'
+Require stack:
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\webpack-runtime.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\api\categories\route.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\require.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\load-components.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\utils.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\options.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\index.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\next.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\server.ts
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\favicon.ico\route.js:1:96916)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\favicon.ico\route.js:1:96967) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/favicon.ico'
+}
+ GET /favicon.ico 500 in 81ms
+ ⨯ Error: Cannot find module './4586.js'
+Require stack:
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\webpack-runtime.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\api\categories\route.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\require.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\load-components.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\utils.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\options.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\index.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\next.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\server.ts
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\page.js:2:36886)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\page.js:2:36943) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ⨯ Error: Cannot find module './5611.js'
+Require stack:
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\webpack-runtime.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\api\categories\route.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\require.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\load-components.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\utils.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\options.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\index.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\next.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\server.ts
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js:1:327)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js:1:374) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+Error: Cannot find module './4586.js'
+Require stack:
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\webpack-runtime.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\api\categories\route.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\require.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\load-components.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\utils.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\options.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\index.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\next.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\server.ts
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\page.js:2:36886)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\page.js:2:36943) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/'
+}
+ ⨯ Error: Cannot find module './5611.js'
+Require stack:
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\webpack-runtime.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\api\categories\route.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\require.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\load-components.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\utils.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\options.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\index.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\next.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\server.ts
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js:1:327)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\pages\_document.js:1:374) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ GET / 500 in 342ms
+ GET / 500 in 114ms
+ ⨯ Error: Cannot find module './4586.js'
+Require stack:
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\webpack-runtime.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\api\categories\route.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\require.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\load-components.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\utils.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\options.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\swc\index.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\build\next-config-ts\transpile-config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\config.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\node_modules\next\dist\server\next.js
+- C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\server.ts
+    at <unknown> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\favicon.ico\route.js:1:96916)
+    at Object.<anonymous> (C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\server\app\favicon.ico\route.js:1:96967) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array],
+  page: '/favicon.ico'
+}
+ GET /favicon.ico 500 in 82ms
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+> Ready on http://localhost:3000
+> Socket.IO server running at ws://localhost:3000/api/socketio
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+> Ready on http://localhost:3000
+> Socket.IO server running at ws://localhost:3000/api/socketio
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+> Ready on http://localhost:3000
+> Socket.IO server running at ws://localhost:3000/api/socketio
+ ○ Compiling /gallery ...
+ ✓ Compiled /gallery in 5.4s (908 modules)
+ GET /gallery 200 in 7952ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /api/pages in 5s (1085 modules)
+ GET /favicon.ico 200 in 6144ms
+ GET /api/pages 200 in 5611ms
+ GET /api/placeholder/400/300 404 in 7800ms
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 510ms (195 modules)
+ ○ Compiling /admin/slider ...
+ ⨯ ./src/app/admin/layout.tsx
+Error:   [31mx[0m Expected '</', got 'jsx text (
+  [31m|[0m             )'
+    ,-[[36;1;4mC:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\src\app\admin\layout.tsx[0m:86:1]
+ [2m83[0m |     
+ [2m84[0m |               <div className="mt-8 pt-8 border-t border-gray-200">
+ [2m85[0m |                 Logout
+ [2m86[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m             </button>
+ [2m87[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m             <div className="mt-4">
+ [2m88[0m |                   <ThemeSwitcher />
+ [2m89[0m |                 </div>
+ [2m90[0m |               </div>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/layout.tsx
+ ⨯ ./src/app/admin/layout.tsx
+Error:   [31mx[0m Expected '</', got 'jsx text (
+  [31m|[0m             )'
+    ,-[[36;1;4mC:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\src\app\admin\layout.tsx[0m:86:1]
+ [2m83[0m |     
+ [2m84[0m |               <div className="mt-8 pt-8 border-t border-gray-200">
+ [2m85[0m |                 Logout
+ [2m86[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m             </button>
+ [2m87[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m             <div className="mt-4">
+ [2m88[0m |                   <ThemeSwitcher />
+ [2m89[0m |                 </div>
+ [2m90[0m |               </div>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/layout.tsx
+ ⨯ ./src/app/admin/layout.tsx
+Error:   [31mx[0m Expected '</', got 'jsx text (
+  [31m|[0m             )'
+    ,-[[36;1;4mC:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\src\app\admin\layout.tsx[0m:86:1]
+ [2m83[0m |     
+ [2m84[0m |               <div className="mt-8 pt-8 border-t border-gray-200">
+ [2m85[0m |                 Logout
+ [2m86[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m             </button>
+ [2m87[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m             <div className="mt-4">
+ [2m88[0m |                   <ThemeSwitcher />
+ [2m89[0m |                 </div>
+ [2m90[0m |               </div>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/layout.tsx
+ ⨯ ./src/app/admin/layout.tsx
+Error:   [31mx[0m Expected '</', got 'jsx text (
+  [31m|[0m             )'
+    ,-[[36;1;4mC:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\src\app\admin\layout.tsx[0m:86:1]
+ [2m83[0m |     
+ [2m84[0m |               <div className="mt-8 pt-8 border-t border-gray-200">
+ [2m85[0m |                 Logout
+ [2m86[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m             </button>
+ [2m87[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m             <div className="mt-4">
+ [2m88[0m |                   <ThemeSwitcher />
+ [2m89[0m |                 </div>
+ [2m90[0m |               </div>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/layout.tsx
+ GET /admin/slider 500 in 4851ms
+ GET /gallery 500 in 1922ms
+ GET /gallery 500 in 71ms
+ GET /admin/slider 500 in 120ms
+ GET /gallery 500 in 88ms
+ GET /admin/slider 500 in 104ms
+ GET /admin/slider 500 in 61ms
+ GET /admin/slider 500 in 74ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ ./src/app/admin/layout.tsx
+Error:   [31mx[0m Expected '</', got 'jsx text (
+  [31m|[0m             )'
+    ,-[[36;1;4mC:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\src\app\admin\layout.tsx[0m:86:1]
+ [2m83[0m |     
+ [2m84[0m |               <div className="mt-8 pt-8 border-t border-gray-200">
+ [2m85[0m |                 Logout
+ [2m86[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m             </button>
+ [2m87[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m             <div className="mt-4">
+ [2m88[0m |                   <ThemeSwitcher />
+ [2m89[0m |                 </div>
+ [2m90[0m |               </div>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/layout.tsx
+ GET /gallery 500 in 455ms
+ GET /admin/login?from=%2Fadmin 500 in 1445ms
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ ./src/app/admin/layout.tsx
+Error:   [31mx[0m Expected '</', got 'jsx text (
+  [31m|[0m             )'
+    ,-[[36;1;4mC:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\src\app\admin\layout.tsx[0m:86:1]
+ [2m83[0m |     
+ [2m84[0m |               <div className="mt-8 pt-8 border-t border-gray-200">
+ [2m85[0m |                 Logout
+ [2m86[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m             </button>
+ [2m87[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m             <div className="mt-4">
+ [2m88[0m |                   <ThemeSwitcher />
+ [2m89[0m |                 </div>
+ [2m90[0m |               </div>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/layout.tsx
+ ⨯ ./src/app/admin/layout.tsx
+Error:   [31mx[0m Expected '</', got 'jsx text (
+  [31m|[0m             )'
+    ,-[[36;1;4mC:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\src\app\admin\layout.tsx[0m:86:1]
+ [2m83[0m |     
+ [2m84[0m |               <div className="mt-8 pt-8 border-t border-gray-200">
+ [2m85[0m |                 Logout
+ [2m86[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m             </button>
+ [2m87[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m             <div className="mt-4">
+ [2m88[0m |                   <ThemeSwitcher />
+ [2m89[0m |                 </div>
+ [2m90[0m |               </div>
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/admin/layout.tsx
+ GET /favicon.ico 500 in 1466ms
+ GET /gallery 500 in 1209ms
+ GET /favicon.ico 500 in 49ms
+ GET /admin/login?from=%2Fadmin 500 in 1178ms
+ GET /favicon.ico 500 in 30ms
+ GET /favicon.ico 500 in 37ms
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+> Ready on http://localhost:3000
+> Socket.IO server running at ws://localhost:3000/api/socketio
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Server startup error: [Error: EPERM: operation not permitted, scandir 'C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\.next\static\chunks\app\api\slides'] {
+  errno: -4048,
+  code: 'EPERM',
+  syscall: 'scandir',
+  path: 'C:\\Users\\crypt\\Downloads\\Ai projects\\websites\\NovaGen Automation\\.next\\static\\chunks\\app\\api\\slides'
+}
+[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+^C[31m[nodemon] app crashed - waiting for file changes before starting...[39m
+[32m[nodemon] restarting child process[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\crypt\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\crypt\Downloads\Ai projects\websites\NovaGen Automation\package-lock.json
+
+^CError: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use ::1:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use ::1:3000) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::1',
+  port: 3000
+}

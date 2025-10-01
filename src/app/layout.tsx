@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { CustomThemeProvider } from "@/components/CustomThemeProvider";
 import ChatBot from "@/components/ChatBot";
 
 const geistSans = Geist({
@@ -45,11 +46,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
       >
-        <Header />
-        <main id="main-content">{children}</main>
-        <Footer />
-        <ChatBot />
-        <Toaster />
+        <CustomThemeProvider>
+          <Header />
+          <main id="main-content">{children}</main>
+          <Footer />
+          
+          <Toaster />
+        </CustomThemeProvider>
       </body>
     </html>
   );

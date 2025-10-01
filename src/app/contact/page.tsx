@@ -331,11 +331,13 @@ export default function ContactPage() {
                 <h3 className="text-xl font-semibold mb-4">Need Immediate Assistance?</h3>
                 <p className="mb-4">Call us directly for urgent inquiries or technical support.</p>
                 <div className="space-y-2">
-                  <a href="tel:+919878628680" className="block hover:text-blue-200 transition-colors">
-                    📞 +91 98786-28680
+                  <a href="tel:+919878628680" className="flex items-center space-x-2 hover:text-blue-200 transition-colors">
+                    <Phone className="h-4 w-4" />
+                    <span>+91 98786-28680</span>
                   </a>
-                  <a href="tel:+917087488699" className="block hover:text-blue-200 transition-colors">
-                    📞 +91 70874-88699
+                  <a href="tel:+917087488699" className="flex items-center space-x-2 hover:text-blue-200 transition-colors">
+                    <Phone className="h-4 w-4" />
+                    <span>+91 70874-88699</span>
                   </a>
                 </div>
               </div>
